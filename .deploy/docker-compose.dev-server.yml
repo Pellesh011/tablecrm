@@ -1,0 +1,392 @@
+services:
+  nginx:
+    build:
+      context: ../nginx
+      dockerfile: Dockerfile
+      args:
+        BRANCH_NAME: ${CI_COMMIT_REF_NAME}
+    command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /certbot/www:/var/www/certbot/:ro
+      - /etc/letsencrypt/:/etc/nginx/ssl/:ro
+      - /var/log:/var/log
+      - /var/www/tablecrm-app:/var/www/app
+      - /var/www/tablecrm-landing:/var/www/landing
+      - /photos:/nginx/photos
+    networks:
+      - nginx-proxy
+      - infrastructure
+      - shared_services
+    depends_on:
+      - adminer
+      - backend
+
+  rabbitmq:
+    image: rabbitmq:3.8.16-management
+    healthcheck:
+      test: rabbitmq-diagnostics -q ping
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASS}
+      RABBITMQ_HOST: ${RABBITMQ_HOST}
+      RABBITMQ_DEFAULT_VHOST: ${RABBITMQ_VHOST}
+    networks:
+      - infrastructure
+
+  certbot:
+    image: certbot/certbot:latest
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew --webroot --webroot-path=/var/www/certbot --quiet --no-random-sleep-on-renew; sleep 12h & wait $${!}; done;'"
+    volumes:
+      - /certbot/www/:/var/www/certbot/:rw
+      - /etc/letsencrypt/:/etc/letsencrypt/:rw
+    networks:
+      - nginx-proxy
+
+  db:
+    image: postgres:14.2
+    restart: always
+    command: postgres -c 'config_file=/etc/postgresql.conf'
+    ports:
+      - "48425:5432"
+    volumes:
+      - pgdata-new:/var/lib/postgresql/data
+      - ./postgresql.conf:/etc/postgresql.conf:ro
+      - ./initdb:/docker-entrypoint-initdb.d
+      - ./db-healthcheck.sh:/healthcheck.sh:ro
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASS}
+      POSTGRES_DB: cash_2
+    healthcheck:
+      test: ["CMD-SHELL", "/healthcheck.sh"]
+      interval: 20s
+      timeout: 3s
+      retries: 5
+      start_interval: 5s
+      start_period: 5s
+    networks:
+      - nginx-proxy
+      - infrastructure
+
+  backup:
+    build:
+      context: ../backup
+    restart: always
+    environment:
+      SCHEDULE: '@hourly'
+      BACKUP_KEEP_DAYS: 14
+      S3_ENDPOINT: https://storage.clo.ru/
+      S3_REGION: eu-north-1
+      S3_ACCESS_KEY_ID: ${S3_BACKUPS_ACCESSKEY}
+      S3_SECRET_ACCESS_KEY: ${S3_BACKUPS_SECRETKEY}
+      S3_BUCKET: apps3tablecrm-default-bucket
+      S3_PREFIX: backups/mastertablecrm
+      POSTGRES_HOST: ${POSTGRES_HOST}
+      POSTGRES_DATABASE: cash_2
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASS}
+      PGDUMP_EXTRA_OPTS: '--exclude-table-data=events'
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - nginx-proxy
+
+  adminer:
+    # https://github.com/dockette/adminer/tree/master
+    image: dockette/adminer:postgres
+    restart: always
+    environment:
+      ADMINER_DEFAULT_SERVER: ${POSTGRES_HOST}
+      ADMINER_DESIGN: pepa-linha-dark
+      ADMINER_PLUGINS: "designs tables-filter dump-json version-noverify edit-calendar config highlight-monaco pretty-json-column "
+    networks:
+      - nginx-proxy
+      - infrastructure
+    depends_on:
+      db:
+        condition: service_healthy
+
+  backend:
+    build:
+      context: ../backend
+    image: tablecrm_backend:latest
+    restart: always
+    volumes:
+      - ../backend:/backend
+      - /certs:/certs
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    environment:
+      LOG_LEVEL: debug
+      APPLE_PASS_TYPE_ID: ${APPLE_PASS_TYPE_ID}
+      APPLE_TEAM_ID: ${APPLE_TEAM_ID}
+      APPLE_CERTIFICATE_PATH: ${APPLE_CERTIFICATE_PATH}
+      APPLE_KEY_PATH: ${APPLE_KEY_PATH}
+      APPLE_WWDR_PATH: ${APPLE_WWDR_PATH}
+      APPLE_NOTIFICATION_PATH: ${APPLE_NOTIFICATION_PATH}
+      APPLE_NOTIFICATION_KEY: ${APPLE_NOTIFICATION_KEY}
+      PKPASS_PASSWORD: ${PKPASS_PASSWORD}
+      APP_URL: ${APP_URL}
+      S3_ACCESS: ${S3_ACCESS}
+      S3_SECRET: ${S3_SECRET}
+      S3_URL: ${S3_URL}
+      TG_TOKEN: ${TG_TOKEN}
+      CHEQUES_TOKEN: ${CHEQUES_TOKEN}
+      ACCOUNT_INTERVAL: ${ACCOUNT_INTERVAL}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASS: ${POSTGRES_PASS}
+      POSTGRES_HOST: ${POSTGRES_HOST}
+      POSTGRES_PORT: ${POSTGRES_PORT}
+      XDG_RUNTIME_DIR: ./tmp
+      RABBITMQ_USER: ${RABBITMQ_USER}
+      RABBITMQ_PASS: ${RABBITMQ_PASS}
+      RABBITMQ_HOST: ${RABBITMQ_HOST}
+      RABBITMQ_PORT: ${RABBITMQ_PORT}
+      RABBITMQ_VHOST: ${RABBITMQ_VHOST}
+      GEOAPIFY_SECRET: ${GEOAPIFY_SECRET}
+    networks:
+      - nginx-proxy
+      - infrastructure
+
+  worker:
+    build:
+      context: ../backend
+    restart: always
+    command: bash -c "python3 worker.py"
+    volumes:
+      - /certs:/certs
+    environment:
+      APPLE_PASS_TYPE_ID: ${APPLE_PASS_TYPE_ID}
+      APPLE_TEAM_ID: ${APPLE_TEAM_ID}
+      APPLE_CERTIFICATE_PATH: ${APPLE_CERTIFICATE_PATH}
+      APPLE_KEY_PATH: ${APPLE_KEY_PATH}
+      APPLE_WWDR_PATH: ${APPLE_WWDR_PATH}
+      APPLE_NOTIFICATION_PATH: ${APPLE_NOTIFICATION_PATH}
+      APPLE_NOTIFICATION_KEY: ${APPLE_NOTIFICATION_KEY}
+      PKPASS_PASSWORD: ${PKPASS_PASSWORD}
+      APP_URL: ${APP_URL}
+      S3_ACCESS: ${S3_ACCESS}
+      S3_SECRET: ${S3_SECRET}
+      S3_URL: ${S3_URL}
+      TG_TOKEN: ${TG_TOKEN}
+      CHEQUES_TOKEN: ${CHEQUES_TOKEN}
+      ACCOUNT_INTERVAL: ${ACCOUNT_INTERVAL}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASS: ${POSTGRES_PASS}
+      POSTGRES_HOST: ${POSTGRES_HOST}
+      POSTGRES_PORT: ${POSTGRES_PORT}
+      XDG_RUNTIME_DIR: ./tmp
+      RABBITMQ_USER: ${RABBITMQ_USER}
+      RABBITMQ_PASS: ${RABBITMQ_PASS}
+      RABBITMQ_HOST: ${RABBITMQ_HOST}
+      RABBITMQ_PORT: ${RABBITMQ_PORT}
+      RABBITMQ_VHOST: ${RABBITMQ_VHOST}
+    networks:
+      - nginx-proxy
+      - infrastructure
+
+  backend_jobs:
+    build:
+      context: ../backend
+    restart: always
+    command: bash -c "python3 start_jobs.py"
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      LOG_LEVEL: debug
+      APPLE_PASS_TYPE_ID: ${APPLE_PASS_TYPE_ID}
+      APPLE_TEAM_ID: ${APPLE_TEAM_ID}
+      APPLE_CERTIFICATE_PATH: ${APPLE_CERTIFICATE_PATH}
+      APPLE_KEY_PATH: ${APPLE_KEY_PATH}
+      APPLE_WWDR_PATH: ${APPLE_WWDR_PATH}
+      APPLE_NOTIFICATION_PATH: ${APPLE_NOTIFICATION_PATH}
+      APPLE_NOTIFICATION_KEY: ${APPLE_NOTIFICATION_KEY}
+      PKPASS_PASSWORD: ${PKPASS_PASSWORD}
+      APP_URL: ${APP_URL}
+      S3_ACCESS: ${S3_ACCESS}
+      S3_SECRET: ${S3_SECRET}
+      S3_URL: ${S3_URL}
+      TG_TOKEN: ${TG_TOKEN}
+      CHEQUES_TOKEN: ${CHEQUES_TOKEN}
+      ACCOUNT_INTERVAL: ${ACCOUNT_INTERVAL}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASS: ${POSTGRES_PASS}
+      POSTGRES_HOST: ${POSTGRES_HOST}
+      POSTGRES_PORT: ${POSTGRES_PORT}
+      XDG_RUNTIME_DIR: ./tmp
+    networks:
+      - nginx-proxy
+
+  teleg_bot:
+    build:
+      context: ../backend
+    restart: always
+    command: python3 bot.py
+    volumes:
+      - /photos:/backend/photos
+    depends_on:
+      backend:
+        condition:
+          service_started
+      rabbitmq:
+        condition: service_healthy
+    environment:
+      LOG_LEVEL: debug
+      APP_URL: ${APP_URL}
+      TG_TOKEN: ${TG_TOKEN}
+      CHEQUES_TOKEN: ${CHEQUES_TOKEN}
+      POSTGRES_HOST: ${POSTGRES_HOST}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASS: ${POSTGRES_PASS}
+      POSTGRES_PORT: ${POSTGRES_PORT}
+      RABBITMQ_USER: ${RABBITMQ_USER}
+      RABBITMQ_PASS: ${RABBITMQ_PASS}
+      RABBITMQ_HOST: ${RABBITMQ_HOST}
+      RABBITMQ_PORT: ${RABBITMQ_PORT}
+      RABBITMQ_VHOST: ${RABBITMQ_VHOST}
+      S3_ACCESS: ${S3_ACCESS}
+      S3_SECRET: ${S3_SECRET}
+      S3_URL: ${S3_URL}
+    networks:
+      - nginx-proxy
+      - infrastructure
+
+  telegram_polling:
+    build:
+      context: ../backend
+    restart: always
+    command: python3 -m api.chats.telegram.telegram_polling_worker
+    depends_on:
+      - backend
+      - rabbitmq
+    environment:
+      LOG_LEVEL: debug
+      APP_URL: ${APP_URL}
+      POSTGRES_HOST: ${POSTGRES_HOST}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASS: ${POSTGRES_PASS}
+      POSTGRES_PORT: ${POSTGRES_PORT}
+      S3_ACCESS: ${S3_ACCESS}
+      S3_SECRET: ${S3_SECRET}
+      S3_URL: ${S3_URL}
+    networks:
+      - nginx-proxy
+      - infrastructure
+
+  message_consumer_task:
+    build:
+      context: ../backend
+    restart: always
+    command: python3 message_consumer.py
+    environment:
+      APPLE_PASS_TYPE_ID: ${APPLE_PASS_TYPE_ID}
+      APPLE_TEAM_ID: ${APPLE_TEAM_ID}
+      APPLE_CERTIFICATE_PATH: ${APPLE_CERTIFICATE_PATH}
+      APPLE_KEY_PATH: ${APPLE_KEY_PATH}
+      APPLE_WWDR_PATH: ${APPLE_WWDR_PATH}
+      APPLE_NOTIFICATION_PATH: ${APPLE_NOTIFICATION_PATH}
+      APPLE_NOTIFICATION_KEY: ${APPLE_NOTIFICATION_KEY}
+      PKPASS_PASSWORD: ${PKPASS_PASSWORD}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASS: ${POSTGRES_PASS}
+      POSTGRES_HOST: ${POSTGRES_HOST}
+      POSTGRES_PORT: ${POSTGRES_PORT}
+      TG_TOKEN: ${TG_TOKEN}
+      RABBITMQ_USER: ${RABBITMQ_USER}
+      RABBITMQ_PASS: ${RABBITMQ_PASS}
+      RABBITMQ_HOST: ${RABBITMQ_HOST}
+      RABBITMQ_PORT: ${RABBITMQ_PORT}
+      RABBITMQ_VHOST: ${RABBITMQ_VHOST}
+      S3_ACCESS: ${S3_ACCESS}
+      S3_SECRET: ${S3_SECRET}
+      S3_URL: ${S3_URL}
+    networks:
+      - nginx-proxy
+      - infrastructure
+
+  prometheus:
+    image: prom/prometheus:latest
+    restart: unless-stopped
+    user: "root"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - /var/lib/prometheus/data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--storage.tsdb.retention.time=30d'
+      - '--web.enable-lifecycle'
+      - '--web.console.libraries=/usr/share/prometheus/console_libraries'
+      - '--web.console.templates=/usr/share/prometheus/consoles'
+      - '--web.external-url=https://dev.tablecrm.com/prometheus'
+      - '--web.route-prefix=/'
+    networks:
+      - nginx-proxy
+      - infrastructure
+    depends_on:
+      - backend
+      - node-exporter
+
+  grafana:
+    image: grafana/grafana:latest
+    restart: unless-stopped
+    user: "root"
+    volumes:
+      - ../monitoring/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ../monitoring/grafana/dashboards:/var/lib/grafana/dashboards:ro
+      - /var/lib/grafana/data:/var/lib/grafana
+    environment:
+      - GF_SERVER_PROTOCOL=http
+      - GF_SERVER_DOMAIN=dev.tablecrm.com
+      - GF_SERVER_ROOT_URL=https://dev.tablecrm.com/grafana
+      - GF_SERVER_SERVE_FROM_SUB_PATH=true
+      - GF_SECURITY_ADMIN_USER=${GRAFANA_ADMIN_USER:-admin}
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_ADMIN_PASSWORD:-admin}
+      - GF_AUTH_ANONYMOUS_ENABLED=false
+      - GF_INSTALL_PLUGINS=grafana-piechart-panel
+    networks:
+      - nginx-proxy
+    depends_on:
+      - prometheus
+
+  node-exporter:
+    image: prom/node-exporter:latest
+    restart: unless-stopped
+    command:
+      - '--path.procfs=/host/proc'
+      - '--path.sysfs=/host/sys'
+      - '--path.rootfs=/rootfs'
+      - '--collector.filesystem.mount-points-exclude=^/(sys|proc|dev|host|etc)($$|/)'
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/rootfs:ro
+    networks:
+      - infrastructure
+
+volumes:
+  pgdata-new:
+
+networks:
+  nginx-proxy:
+    name: tablecrm_nginx-proxy
+    external: true
+  infrastructure:
+    name: infrastructure
+    external: true
+  shared_services:
+    external: true

@@ -1,0 +1,171 @@
+include:
+  - local: '.ci/rules.yml'
+
+variables:
+  TERM: "xterm-256color"
+  CLICOLOR_FORCE: "1"
+  FORCE_COLOR: "1"
+  SKIP_TEST: "false"  # Установите "true" для временного отключения
+
+workflow:
+  auto_cancel:
+    on_new_commit: conservative
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: $CI_COMMIT_BRANCH == "dev"
+    - if: $CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS
+      when: never
+    - if: $CI_COMMIT_BRANCH || $CI_COMMIT_TAG
+
+stages:
+  - lint
+  - test
+  - deploy
+
+lint-backend:
+  stage: lint
+  extends: .rules:test
+  image: python:3.9-slim
+  interruptible: true
+  tags:
+    - docker
+  variables:
+    PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+  cache:
+    key: "${CI_COMMIT_REF_SLUG}-lint"
+    paths:
+      - .cache/pip
+  before_script:
+    - pip install -r backend/requirements-dev.txt
+  script:
+    - ruff check backend
+    - black --check backend
+
+smoke-test-job:
+  stage: test
+  extends: .rules:test
+  interruptible: true
+  tags:
+    - dev_runner
+  variables:
+    COMPOSE_FILEPATH: ".deploy/docker-compose.test.yml"
+    COMPOSE_PROJECT_NAME: "ci_test_${CI_JOB_ID}"
+    BACKEND_SERVICE_NAME: "backend_test"
+  before_script:
+    - echo "$CI_REGISTRY_PASSWORD" | docker login $CI_REGISTRY -u $CI_REGISTRY_USER --password-stdin
+  script:
+    - echo "Starting test environment..."
+    - docker compose -f "$COMPOSE_FILEPATH" up -d --build --force-recreate
+
+    - echo "Waiting for services..."
+    - sleep 40
+
+    - echo "Container is UP. Last logs:"
+    - docker compose -f "$COMPOSE_FILEPATH" logs --tail=20 "$BACKEND_SERVICE_NAME"
+
+    - echo "Checking HTTP Health..."
+    - |
+      # Extract only the port from the mapping socket
+      APP_PORT=$(docker compose -f "$COMPOSE_FILEPATH" port "$BACKEND_SERVICE_NAME" 8000 | cut -d: -f2)
+
+      echo "Mapped port is: $APP_PORT"
+
+      # Request the 'docker' host using the mapped port
+      curl --fail --silent --show-error \
+        --retry 10 \
+        --retry-delay 5 \
+        --retry-connrefused \
+        "http://127.0.0.1:$APP_PORT/health"
+
+    - echo "Smoke tests passed"
+  after_script:
+    - docker compose -f "$COMPOSE_FILEPATH" logs > full_docker_logs.txt
+    - docker compose -f "$COMPOSE_FILEPATH" down -v --rmi local --remove-orphans || true
+  artifacts:
+    when: always
+    paths:
+      - full_docker_logs.txt
+    expire_in: 1 week
+
+build-up-docker-job-dev:
+  stage: deploy
+  extends: .rules:on-dev
+  interruptible: false
+  tags:
+    - dev_runner
+  environment: dev
+  before_script:
+    - echo "$CI_REGISTRY_PASSWORD" | docker login $CI_REGISTRY -u $CI_REGISTRY_USER --password-stdin
+    - export COMPOSE_FILE=.deploy/docker-compose.dev-server.yml
+    - export RABBITMQ_HOST="$RABBITMQ_HOST"
+    - export RABBITMQ_PORT="$RABBITMQ_PORT"
+    - export RABBITMQ_USER="$RABBITMQ_USER"
+    - export RABBITMQ_PASS="$RABBITMQ_PASS"
+    - export RABBITMQ_VHOST="$RABBITMQ_VHOST"
+    - export APP_URL="$APP_URL"
+    - export S3_ACCESS="$S3_ACCESS"
+    - export S3_SECRET="$S3_SECRET"
+    - export S3_URL="$S3_URL"
+    - export S3_BACKUPS_ACCESSKEY="$S3_BACKUPS_ACCESSKEY"
+    - export S3_BACKUPS_SECRETKEY="$S3_BACKUPS_SECRETKEY"
+    - export TG_TOKEN="$TG_TOKEN"
+    - export POSTGRES_USER="$POSTGRES_USER"
+    - export POSTGRES_PASS="$POSTGRES_PASS"
+    - export POSTGRES_HOST="$POSTGRES_HOST"
+    - export POSTGRES_PORT="$POSTGRES_PORT"
+    - export CHEQUES_TOKEN="$CHEQUES_TOKEN"
+    - export ACCOUNT_INTERVAL="$ACCOUNT_INTERVAL"
+    - export GEOAPIFY_SECRET="$GEOAPIFY_SECRET"
+    - export APPLE_PASS_TYPE_ID="$APPLE_PASS_TYPE_ID"
+    - export APPLE_TEAM_ID="$APPLE_TEAM_ID"
+    - export APPLE_CERTIFICATE_PATH="$APPLE_CERTIFICATE_PATH"
+    - export APPLE_KEY_PATH="$APPLE_KEY_PATH"
+    - export APPLE_WWDR_PATH="$APPLE_WWDR_PATH"
+    - export APPLE_NOTIFICATION_PATH="$APPLE_NOTIFICATION_PATH"
+    - export APPLE_NOTIFICATION_KEY="$APPLE_NOTIFICATION_KEY"
+    - export PKPASS_PASSWORD="$PKPASS_PASSWORD"
+    - docker compose build
+  script:
+    - echo "Stopping old containers..."
+    - docker compose down --remove-orphans || true
+
+    - echo "Starting DB and infrastructure..."
+    - docker compose up -d db rabbitmq  # только БД и зависимости
+    - echo "Passing variables for migrations..."
+    - export IMAGE_NAME=tablecrm_backend:latest
+    - export NETWORK_NAME=infrastructure
+    - export POSTGRES_HOST=db
+    - export POSTGRES_USER="$POSTGRES_USER"
+    - export POSTGRES_PASS="$POSTGRES_PASS"
+    - export POSTGRES_PORT="$POSTGRES_PORT"
+
+    # - echo "Applying migrations..."
+    # - chmod +x .deploy/apply_migrations.sh
+    # - .deploy/apply_migrations.sh
+
+    - echo "Starting full deployment..."
+    - docker compose up -d --force-recreate
+
+    - echo "Deployment successful"
+
+
+build-up-docker-job:
+  stage: deploy
+  extends: .rules:on-master
+  interruptible: false
+  tags:
+    - master_backend_runner
+  environment: production
+  before_script:
+    - echo "$CI_REGISTRY_PASSWORD" | docker login $CI_REGISTRY -u $CI_REGISTRY_USER --password-stdin
+    - docker build -t tablecrm_backend:latest ./backend
+    - docker tag tablecrm_backend:latest $CI_REGISTRY_IMAGE/backend:$CI_COMMIT_SHA
+    - docker push $CI_REGISTRY_IMAGE/backend:$CI_COMMIT_SHA
+    # Сборка Nginx
+    - docker build --build-arg BRANCH_NAME=master -t $CI_REGISTRY_IMAGE/nginx:$CI_COMMIT_SHA ./nginx
+    - docker push $CI_REGISTRY_IMAGE/nginx:$CI_COMMIT_SHA
+  script:
+    - export CI_COMMIT_SHA=$CI_COMMIT_SHA
+    - chmod +x .deploy/deploy.sh
+    - cd .deploy && ./deploy.sh

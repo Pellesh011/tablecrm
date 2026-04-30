@@ -1,0 +1,6 @@
+\set ON_ERROR_STOP 0
+
+CREATE DATABASE cash_2;
+CREATE DATABASE cash_job_store;
+
+\set ON_ERROR_STOP 1

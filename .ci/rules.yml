@@ -1,0 +1,25 @@
+.rules:on-master:
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+.rules:on-stand:
+  rules:
+    - if: $CI_COMMIT_BRANCH =~ /^stand-.*/
+
+.rules:on-dev:
+  rules:
+    - if: $CI_COMMIT_BRANCH == "dev"
+
+.rules:on-release-tag:
+  rules:
+    - if: $CI_COMMIT_TAG =~ /^v[0-9]+\.[0-9]+\.[0-9]+$/
+
+.rules:always:
+  rules:
+    - when: on_success
+
+.rules:test:
+  rules:
+    - if: $SKIP_TEST == "true"
+      when: never
+    - when: always

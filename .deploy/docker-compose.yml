@@ -1,0 +1,175 @@
+services:
+  docasaurus:
+    build: ../submodule-docurus
+    restart: always
+    command: npm run serve -- --build --port 3000 --host 0.0.0.0
+    networks:
+      - nginx-proxy
+
+  nginx:
+    build:
+      context: ../nginx
+      dockerfile: Dockerfile
+      args:
+        BRANCH_NAME: ${CI_COMMIT_REF_NAME}
+    command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+    restart: always
+    labels:
+      logging: "promtail"
+      logging_jobname: "containerlogs"
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /certbot/www:/var/www/certbot/:ro
+      - /etc/letsencrypt/:/etc/nginx/ssl/:ro
+      - /var/log:/var/log
+      - /var/www/tablecrm-app:/var/www/app
+      - /var/www/tablecrm-landing:/var/www/landing
+      - /photos:/nginx/photos
+    networks:
+      - nginx-proxy
+      - infrastructure
+      - shared_services
+    depends_on:
+      - adminer
+      - prometheus
+      - loki
+
+  certbot:
+    image: certbot/certbot:latest
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+    volumes:
+      - /certbot/www/:/var/www/certbot/:rw
+      - /etc/letsencrypt/:/etc/letsencrypt/:rw
+    networks:
+      - nginx-proxy
+
+  db:
+    image: postgres:14.2
+    container_name: postgres_container
+    restart: always
+    command: postgres -c 'config_file=/etc/postgresql.conf'
+    ports:
+      - "48425:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./postgresql.conf:/etc/postgresql.conf:ro
+      - ./initdb:/docker-entrypoint-initdb.d:ro
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASS}
+      POSTGRES_DB: cash_2
+    networks:
+      - nginx-proxy
+      - infrastructure
+
+  backup:
+    build: ../backup
+    restart: always
+    environment:
+      SCHEDULE: '@hourly'
+      BACKUP_KEEP_DAYS: 14
+      S3_ENDPOINT: https://storage.clo.ru/
+      S3_REGION: eu-north-1
+      S3_ACCESS_KEY_ID: ${S3_BACKUPS_ACCESSKEY}
+      S3_SECRET_ACCESS_KEY: ${S3_BACKUPS_SECRETKEY}
+      S3_BUCKET: apps3tablecrm-default-bucket
+      S3_PREFIX: backups/mastertablecrm
+      POSTGRES_HOST: db
+      POSTGRES_DATABASE: cash_2
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASS}
+      PGDUMP_EXTRA_OPTS: '--exclude-table-data=events'
+    networks:
+      - nginx-proxy
+
+  adminer:
+    image: adminer
+    restart: always
+    networks:
+      - nginx-proxy
+    depends_on:
+      db:
+        condition: service_healthy
+
+  node-exporter:
+    image: prom/node-exporter:latest
+    container_name: node-exporter
+    restart: unless-stopped
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/rootfs:ro
+    command:
+      - '--path.procfs=/host/proc'
+      - '--path.rootfs=/rootfs'
+      - '--path.sysfs=/host/sys'
+      - '--collector.filesystem.mount-points-exclude=^/(sys|proc|dev|host|etc)($$|/)'
+    networks:
+      - nginx-proxy
+
+  prometheus:
+    image: prom/prometheus
+    restart: always
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./web.yml:/etc/prometheus/web.yml:ro
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--web.external-url=/prometheus/'
+      - '--web.config.file=/etc/prometheus/web.yml'
+      - '--web.route-prefix=/'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--web.enable-lifecycle'
+    networks:
+      - nginx-proxy
+      - infrastructure
+
+  loki:
+    image: grafana/loki:latest
+    restart: always
+    volumes:
+      - ./loki-config.yaml:/etc/loki/loki-config.yaml:ro
+    command: -config.file=/etc/loki/local-config.yaml
+    networks:
+      - nginx-proxy
+
+  promtail:
+    image: grafana/promtail:latest
+    restart: always
+    volumes:
+      - /var/log:/var/log
+      - ./promtail-config.yaml:/etc/promtail/config.yaml:ro
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: -config.file=/etc/promtail/config.yaml
+    networks:
+      - nginx-proxy
+
+  telegraf:
+    image: telegraf:latest
+    restart: always
+    container_name: telegraf
+    hostname: telegraf
+    volumes:
+      - ./telegraf.conf:/etc/telegraf/telegraf.conf:ro
+      - /var/log:/var/log
+    ports:
+      - 9126:9126
+    command: telegraf --config /etc/telegraf/telegraf.conf
+    networks:
+      - nginx-proxy
+
+volumes:
+  pgdata:
+
+networks:
+  nginx-proxy:
+  infrastructure:
+    name: infrastructure
+    external: true
+  shared_services:
+    external: true

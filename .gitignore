@@ -1,0 +1,72 @@
+ll/backend/photos/**
+/backend/.venv/**
+/backend/.python-version
+/backend/.idea
+/backend/**/__pycache__
+/nginx/nginx.conf
+/ssl/localhost-key.pem
+/ssl/localhost.pem
+/nginx/Dockerfile
+/nginx/nginx.conf
+/nginx/localhost.key
+/nginx/localhost.crt
+.env
+/.idea
+/nginx/rootCA.key
+/nginx/rootCA.crt
+/nginx/rootCA.pem
+.vscode
+/.nezuko
+/certs
+.vscode
+*.code-workspace
+
+# Ignore all docker-compose files
+docker-compose*
+# but not in root dir
+!/.deploy/docker-compose*
+
+# Avito integration files
+*AVITO*.md
+Avito_*.json
+.env.avito.example
+
+# Encryption documentation
+*ENCRYPTION*.md
+QUICK_START_ENCRYPTION.md
+
+# Testing documentation and scripts
+*TESTING*.md
+TESTING_*.md
+ANSWERS_TO_TESTING_QUESTIONS.md
+test_avito*.py
+test_credentials_flow.py
+test_e2e_comprehensive.py
+test_integration*.sh
+
+# Deployment documentation
+DEPLOYMENT*.md
+
+# Other documentation
+DOCUMENTATION_INDEX.md
+INDEX.md
+FINAL_SUMMARY.md
+*.txt
+
+# Backend scripts and tests
+backend/scripts/
+backend/tests/
+backend/config/
+backend/BALANCE_EXPLANATION.md
+backend/test_avito*.py
+
+# Photos directory
+photos/
+
+# Pyenv configuraion
+.venv
+venv
+
+# Internal tool cache
+.ruff_cache/
+.local/

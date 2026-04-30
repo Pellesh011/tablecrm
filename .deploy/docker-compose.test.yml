@@ -1,0 +1,79 @@
+services:
+  db_test:
+    image: postgres:14.2
+    command: ["postgres", "-c", "config_file=/etc/postgresql.conf"]
+    environment:
+      POSTGRES_USER: test_user
+      POSTGRES_PASSWORD: test_password
+      POSTGRES_DB: test_db
+    tmpfs:
+      - /var/lib/postgresql/data
+    volumes:
+      - ./postgresql.conf:/etc/postgresql.conf:ro
+      - ./initdb:/docker-entrypoint-initdb.d:ro
+      - ./db-healthcheck.sh:/healthcheck.sh:ro
+    healthcheck:
+      test: ["CMD-SHELL", "/healthcheck.sh"]
+      interval: 20s
+      timeout: 3s
+      retries: 5
+      start_interval: 5s
+      start_period: 5s
+    networks:
+      - ci-test-network
+
+  rabbitmq_test:
+    image: rabbitmq:3-alpine
+    healthcheck:
+      test: rabbitmq-diagnostics -q ping
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - ci-test-network
+
+  backend_test:
+    build:
+      context: ../backend
+    ports:
+      - "127.0.0.1::8000"
+    depends_on:
+      db_test:
+        condition: service_healthy
+      rabbitmq_test:
+        condition: service_healthy
+    environment:
+      LOG_LEVEL: debug
+      APP_URL: "http://localhost:8000"
+      ACCOUNT_INTERVAL: "10"
+      XDG_RUNTIME_DIR: "/tmp"
+      POSTGRES_USER: "test_user"
+      POSTGRES_PASS: "test_password"
+      POSTGRES_HOST: "db_test"
+      POSTGRES_PORT: "5432"
+      RABBITMQ_USER: "guest"
+      RABBITMQ_PASS: "guest"
+      RABBITMQ_HOST: "rabbitmq_test"
+      RABBITMQ_PORT: "5672"
+      RABBITMQ_VHOST: "/"
+      S3_ACCESS: "dummy_access"
+      S3_SECRET: "dummy_secret"
+      S3_URL: "http://dummy-s3"
+      TG_TOKEN: "123456:dummy-token"
+      CHEQUES_TOKEN: "dummy_token"
+      GEOAPIFY_SECRET: "dummy_secret"
+      APPLE_PASS_TYPE_ID: "pass.com.dummy"
+      APPLE_TEAM_ID: "DUMMYTEAM"
+      APPLE_CERTIFICATE_PATH: "/dev/null"
+      APPLE_KEY_PATH: "/dev/null"
+      APPLE_WWDR_PATH: "/dev/null"
+      APPLE_NOTIFICATION_PATH: "/dev/null"
+      APPLE_NOTIFICATION_KEY: "/dev/null"
+      PKPASS_PASSWORD: "dummy_password"
+    command: bash -c "alembic upgrade head && uvicorn main:app --host=0.0.0.0 --port 8000"
+    networks:
+      - ci-test-network
+
+networks:
+  ci-test-network:
+    driver: bridge
