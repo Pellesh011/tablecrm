@@ -11,7 +11,7 @@ from bot_routes.functions.callbacks import (
     create_select_account_payment_callback,
 )
 from bot_routes.functions.keyboards import *
-from bot_routes.functions.TgBillsFuncions import (
+from bot_routes.functions.TgBillsFunctions import (
     get_chat_owner,
     get_tochka_bank_accounts_by_chat_owner,
 )
@@ -364,7 +364,7 @@ def get_bill_route(bot, s3_client):
                         text=f"Не достпно для {user.username}, так как не является утверждающим.",
                     )
                     return
-                res, msg = await tg_bill_approvers_service.rejet(
+                res, msg = await tg_bill_approvers_service.reject(
                     bill_id, tg_id_updated_by
                 )
                 if not res:

@@ -63,18 +63,18 @@ class AiTunnelService:
                 ) as response:
                     response.raise_for_status()
                     result = await response.json()
-                    logger.info("Успешный запрос к API AiTunnel.")
+                    logger.info("Successful AiTunnel API request.")
                     return result
 
         except ClientResponseError as e:
-            logger.error(f"Ошибка HTTP: {e.status} - {e.message}")
+            logger.error(f"HTTP error: {e.status} - {e.message}")
             raise
         except ClientError as e:
-            logger.error(f"Ошибка клиента: {e}")
+            logger.error(f"Client error: {e}")
             raise
         except json.JSONDecodeError as e:
-            logger.error(f"Ошибка декодирования JSON: {e}")
-            raise ValueError("Некорректный формат ответа от сервера.")
+            logger.error(f"JSON decode error: {e}")
+            raise ValueError("Invalid server response format.")
         except Exception as e:
-            logger.error(f"Неизвестная ошибка: {e}")
+            logger.error(f"Unknown error: {e}")
             raise

@@ -40,7 +40,7 @@ class TgBillsRepository(ITgBillsRepository):
     async def delete(self, id: int) -> None:
         try:
             query = self.tg_bot_bills.delete().where(self.tg_bot_bills.c.id == id)
-            await self.atabase.execute(query)
+            await self.database.execute(query)
         except SQLAlchemyError as e:
             raise Exception(f"Database error: {e}")
 
@@ -48,7 +48,7 @@ class TgBillsRepository(ITgBillsRepository):
         try:
             query = (
                 select([self.tg_bot_bills, self.tochka_bank_accounts.c.accountId])
-                .select_from(tg_bot_bills)
+                .select_from(self.tg_bot_bills)
                 .outerjoin(
                     self.tochka_bank_accounts,
                     self.tg_bot_bills.c.tochka_bank_account_id
