@@ -1,0 +1,171 @@
+[
+  {
+    "name": "Нейро",
+    "description": "Генерирует поля для номенклатур с определенным тегом",
+    "type_of_update": "cron",
+    "update_settings": {
+      "interval_minutes": 5
+    },
+    "is_archived": false,
+    "type": 1,
+    "criteria": {
+      "nomenclatures": {
+        "tags": [
+          "Нейро"
+        ]
+      }
+    },
+    "actions": {
+      "generate_nomenclature_fields": {
+        "llm_model": "gpt-5-nano",
+        "openai_api_key": "",
+        "openai_url_base": "",
+        "fields": ["description_short", "description_long", "category", "unit", "global_category", "seo_title", "seo_description", "seo_keywords", "address"]
+      }
+    }
+  },
+
+  {
+    "name": "VIP",
+    "description": "Устанавливает тег \"VIP\" клиентам сумма покупок которых равна или превышает 100 тысяч рублей",
+    "type": 1,
+    "type_of_update": "cron",
+    "update_settings": {
+      "interval_minutes": 5
+    },
+    "is_archived": false,
+    "criteria": {
+      "purchases": {
+        "total_amount": {
+          "gte": 100000
+        }
+      }
+    },
+    "actions": {
+      "client_tags": {
+        "tags": [
+          {
+            "name": "VIP пользователь",
+            "emoji": "💎",
+            "color": "#C2Cb6A",
+            "description": "VIP пользователь для клиента с покупками на 100 000 р"
+          }
+        ]
+      }
+    }
+  },
+
+  {
+    "name": "Частый Покупатель 30Д",
+    "description": "Выборка клиентов с покупками более 10 раз за последние 30 дней",
+    "type_of_update": "cron",
+    "update_settings": {
+      "interval_minutes": 5
+    },
+    "is_archived": false,
+    "type": 1,
+    "criteria": {
+      "purchases": {
+        "count": {
+          "gte": 10
+        },
+        "date_range": {
+          "gte_seconds_ago": 2592000
+        }
+      }
+    },
+    "actions": null
+  },
+
+  {
+    "name": "Уведомление по Товару",
+    "description": "Сегмент, который шлет уведомление при покупке определенного товара.",
+    "type_of_update": "cron",
+    "update_settings": {
+      "interval_minutes": 5
+    },
+    "is_archived": false,
+    "type": 1,
+    "criteria": {
+      "created_at": {
+        "gte_seconds_ago": 600,
+        "lte_seconds_ago": 0
+      },
+      "nomenclatures": {
+        "name": "VIP товар"
+      }
+    },
+    "actions": {
+      "send_tg_notification": {
+        "trigger_on_new": true,
+        "message": "Куплен товар 'VIP товар'",
+        "user_tag": "admin"
+      }
+    }
+  },
+
+  {
+    "name": "Сборщик Нового Заказа",
+    "description": "Сегмент, который через 5мин. шлет уведомление о новом заказе для сборщика.",
+    "type_of_update": "cron",
+    "update_settings": {
+      "interval_minutes": 5
+    },
+    "is_archived": false,
+    "type": 1,
+    "criteria": {
+      "created_at": {
+        "gte_seconds_ago": 600,
+        "lte_seconds_ago": 0
+      },
+      "picker": {
+        "assigned": false
+      }
+    },
+    "actions": {
+      "send_tg_notification": {
+        "trigger_on_new": true,
+        "message": "Уведомление о новом заказе для сборки на самовывзоз.{{ picker_link }}",
+        "user_tag": "picker"
+      }
+    }
+  },
+
+  {
+    "name": "Оплаченные за Неделю",
+    "description": "Клиенты с полностью оплаченными заказами за неделю",
+    "type_of_update": "cron",
+    "update_settings": {
+      "interval_minutes": 5
+    },
+    "is_archived": false,
+    "type": 1,
+    "criteria": {
+      "purchases": {
+        "is_fully_paid": true,
+        "date_range": {
+          "gte_seconds_ago": 604800
+        }
+      }
+    },
+    "actions": null
+  },
+  {
+    "name": "Оптовые Покупатели 50+",
+    "description": "Клиенты купившие более 50 единиц товара",
+    "type_of_update": "cron",
+    "update_settings": {
+      "interval_minutes": 5
+    },
+    "is_archived": false,
+    "type": 1,
+    "criteria": {
+      "purchases": {
+        "count_of_goods": {
+          "gte": 50
+        }
+      }
+    },
+    "actions": null
+  }
+]

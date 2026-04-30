@@ -1,0 +1,40 @@
+# Настройки Black (Форматирование)
+[tool.black]
+line-length = 88 # Стандарт Black
+target-version = ['py39']
+include = '\.pyi?$'
+
+# Настройки Ruff (Линтер)
+[tool.ruff]
+src = ["backend"]
+# Глобальные настройки
+line-length = 88 # Должно совпадать с Black
+target-version = "py39"
+
+[tool.ruff.lint]
+# Выбранные правила: E (ошибки), W (предупреждения), F (pyflakes), I (сортировка импортов)
+select = ["E", "W", "F", "I"]
+
+# Игнорируемые ошибки (Legacy code support)
+ignore = [
+    "E501",  # Line too long. (Длину строк мы доверяем Black, он сам перенесет где надо)
+    "E712",  # Comparison to True/False. (Полезно для SQLAlchemy фильтров: .filter(User.active == True))
+    "E722",  # Do not use bare 'except'. (Разрешаем 'except:' без указания типа ошибки. Встречается в легаси)
+    "F811",  # Redefinition of unused name. (Двойное объявление функций. Часто бывает в старом коде)
+    "F841",  # Local variable is assigned to but never used. (Мусорные переменные, не влияют на работу)
+    "F403",  # 'from module import *'. (Star imports. Плохо, но используется в текущей архитектуре)
+    "F405",  # Name may be undefined, or defined from star imports. (Следствие F403)
+    "E402",  # Module level import not at top of file. (Иногда нужно для настройки sys.path или env перед импортом)
+    "B008",  # Do not perform function call in argument defaults (Критично для FastAPI, иначе он ругается на Depends(...))
+    "N801",  # Class name should use CapWords (Имена классов)
+    "N802",  # Function name should be lowercase (Имена функций)
+    "N803",  # Argument name should be lowercase (Имена аргументов)
+    "N806",  # Variable in function should be lowercase (Переменные внутри функций)
+    "N815",  # Variable in class scope should not be mixedCase (Переменные в классах)
+]
+
+# Настройки сортировки импортов внутри Ruff
+[tool.ruff.lint.isort]
+known-first-party = ["backend"] # Укажите имя корневой папки вашего приложения (важно для правильной сортировки)
+force-wrap-aliases = true
+combine-as-imports = true

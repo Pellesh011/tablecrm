@@ -1,0 +1,5986 @@
+[
+  {
+    "id": 1,
+    "name": "Транспорт",
+    "parent_id": null,
+    "external_id": "Транспорт",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 2,
+    "name": "Автомобили",
+    "parent_id": 1,
+    "external_id": "Автомобили",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 3,
+    "name": "Мотоциклы и мототехника",
+    "parent_id": 2,
+    "external_id": "Мотоциклы и мототехника",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 4,
+    "name": "Вездеходы",
+    "parent_id": 3,
+    "external_id": "Вездеходы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 5,
+    "name": "Картинг",
+    "parent_id": 3,
+    "external_id": "Картинг",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 6,
+    "name": "Квадроциклы и багги",
+    "parent_id": 3,
+    "external_id": "Квадроциклы и багги",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 7,
+    "name": "Мопеды и скутеры",
+    "parent_id": 3,
+    "external_id": "Мопеды и скутеры",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 8,
+    "name": "Мотоциклы",
+    "parent_id": 3,
+    "external_id": "Мотоциклы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 9,
+    "name": "Снегоходы",
+    "parent_id": 3,
+    "external_id": "Снегоходы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 10,
+    "name": "Грузовики и спецтехника",
+    "parent_id": 2,
+    "external_id": "Грузовики и спецтехника",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 11,
+    "name": "Грузовики",
+    "parent_id": 10,
+    "external_id": "Грузовики",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 12,
+    "name": "Сельхозтехника",
+    "parent_id": 10,
+    "external_id": "Сельхозтехника",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 13,
+    "name": "Седельные тягачи",
+    "parent_id": 10,
+    "external_id": "Седельные тягачи",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 14,
+    "name": "Прицепы",
+    "parent_id": 10,
+    "external_id": "Прицепы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 15,
+    "name": "Экскаваторы",
+    "parent_id": 10,
+    "external_id": "Экскаваторы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 16,
+    "name": "Автобусы",
+    "parent_id": 10,
+    "external_id": "Автобусы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 17,
+    "name": "Автодома",
+    "parent_id": 10,
+    "external_id": "Автодома",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 18,
+    "name": "Автокраны",
+    "parent_id": 10,
+    "external_id": "Автокраны",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 19,
+    "name": "Бульдозеры",
+    "parent_id": 10,
+    "external_id": "Бульдозеры",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 20,
+    "name": "Коммунальная техника",
+    "parent_id": 10,
+    "external_id": "Коммунальная техника",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 21,
+    "name": "Лёгкий коммерческий транспорт",
+    "parent_id": 10,
+    "external_id": "Лёгкий коммерческий транспорт",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 22,
+    "name": "Навесное оборудование",
+    "parent_id": 10,
+    "external_id": "Навесное оборудование",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 23,
+    "name": "Погрузчики",
+    "parent_id": 10,
+    "external_id": "Погрузчики",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 24,
+    "name": "Строительная техника",
+    "parent_id": 10,
+    "external_id": "Строительная техника",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 25,
+    "name": "Техника для лесозаготовки",
+    "parent_id": 10,
+    "external_id": "Техника для лесозаготовки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 26,
+    "name": "Другое",
+    "parent_id": 10,
+    "external_id": "Другое",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 27,
+    "name": "Аренда спецтехники",
+    "parent_id": 2,
+    "external_id": "Аренда спецтехники",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 28,
+    "name": "Подъёмная техника",
+    "parent_id": 27,
+    "external_id": "Подъёмная техника",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 29,
+    "name": "Землеройная техника",
+    "parent_id": 27,
+    "external_id": "Землеройная техника",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 30,
+    "name": "Коммунальная техника",
+    "parent_id": 27,
+    "external_id": "Коммунальная техника",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 31,
+    "name": "Дорожно-строительная техника",
+    "parent_id": 27,
+    "external_id": "Дорожно-строительная техника",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 32,
+    "name": "Грузовой транспорт",
+    "parent_id": 27,
+    "external_id": "Грузовой транспорт",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 33,
+    "name": "Погрузочная техника",
+    "parent_id": 27,
+    "external_id": "Погрузочная техника",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 34,
+    "name": "Навесное оборудование",
+    "parent_id": 27,
+    "external_id": "Навесное оборудование",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 35,
+    "name": "Прицепы",
+    "parent_id": 27,
+    "external_id": "Прицепы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 36,
+    "name": "Сельхозтехника",
+    "parent_id": 27,
+    "external_id": "Сельхозтехника",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 37,
+    "name": "Другое",
+    "parent_id": 27,
+    "external_id": "Другое",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 38,
+    "name": "Водный транспорт",
+    "parent_id": 2,
+    "external_id": "Водный транспорт",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 39,
+    "name": "Вёсельные лодки",
+    "parent_id": 38,
+    "external_id": "Вёсельные лодки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 40,
+    "name": "Гидроциклы",
+    "parent_id": 38,
+    "external_id": "Гидроциклы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 41,
+    "name": "Катера и яхты",
+    "parent_id": 38,
+    "external_id": "Катера и яхты",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 42,
+    "name": "Моторные лодки и моторы",
+    "parent_id": 38,
+    "external_id": "Моторные лодки и моторы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 43,
+    "name": "Запчасти и аксессуары",
+    "parent_id": 2,
+    "external_id": "Запчасти и аксессуары(транспорт)",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 44,
+    "name": "Запчасти",
+    "parent_id": 43,
+    "external_id": "Запчасти",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 45,
+    "name": "Для автомобилей",
+    "parent_id": 44,
+    "external_id": "Для автомобилей",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 46,
+    "name": "Для мототехники",
+    "parent_id": 44,
+    "external_id": "Для мототехники",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 47,
+    "name": "Для грузовиков и спецтехники",
+    "parent_id": 44,
+    "external_id": "Для грузовиков и спецтехники",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 48,
+    "name": "Для водного транспорта",
+    "parent_id": 44,
+    "external_id": "Для водного транспорта",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 49,
+    "name": "Шины, диски и колёса",
+    "parent_id": 43,
+    "external_id": "Шины, диски и колёса",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 50,
+    "name": "Шины",
+    "parent_id": 49,
+    "external_id": "Шины",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 51,
+    "name": "Шины для грузовиков и спецтехники",
+    "parent_id": 49,
+    "external_id": "Шины для грузовиков и спецтехники",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 52,
+    "name": "Мотошины",
+    "parent_id": 49,
+    "external_id": "Мотошины",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 53,
+    "name": "Диски",
+    "parent_id": 49,
+    "external_id": "Диски",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 54,
+    "name": "Колпаки",
+    "parent_id": 49,
+    "external_id": "Колпаки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 55,
+    "name": "Колёса",
+    "parent_id": 49,
+    "external_id": "Колёса",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 56,
+    "name": "Аудио- и видеотехника",
+    "parent_id": 43,
+    "external_id": "Аудио- и видеотехника",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 57,
+    "name": "Аксессуары для автоакустики",
+    "parent_id": 56,
+    "external_id": "Аксессуары для автоакустики",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 58,
+    "name": "Другое",
+    "parent_id": 56,
+    "external_id": "Другое",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 59,
+    "name": "Магнитолы",
+    "parent_id": 56,
+    "external_id": "Магнитолы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 60,
+    "name": "Автоакустика",
+    "parent_id": 56,
+    "external_id": "Автоакустика",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 61,
+    "name": "Видеорегистраторы",
+    "parent_id": 56,
+    "external_id": "Видеорегистраторы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 62,
+    "name": "Усилители",
+    "parent_id": 56,
+    "external_id": "Усилители",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 63,
+    "name": "Переходные рамки",
+    "parent_id": 56,
+    "external_id": "Переходные рамки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 64,
+    "name": "Короба и подиумы",
+    "parent_id": 56,
+    "external_id": "Короба и подиумы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 65,
+    "name": "Аксессуары",
+    "parent_id": 43,
+    "external_id": "Аксессуары",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 66,
+    "name": "Для мото- и водного транспорта",
+    "parent_id": 65,
+    "external_id": "Для мото- и водного транспорта",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 67,
+    "name": "Щётки стеклоочистителя",
+    "parent_id": 65,
+    "external_id": "Щётки стеклоочистителя",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 68,
+    "name": "Для салона",
+    "parent_id": 65,
+    "external_id": "Для салона",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 69,
+    "name": "Защита и декор",
+    "parent_id": 65,
+    "external_id": "Защита и декор",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 70,
+    "name": "Набор автомобилиста",
+    "parent_id": 65,
+    "external_id": "Набор автомобилиста",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 71,
+    "name": "Для колёс",
+    "parent_id": 65,
+    "external_id": "Для колёс",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 72,
+    "name": "Отопительное оборудование",
+    "parent_id": 65,
+    "external_id": "Отопительное оборудование",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 73,
+    "name": "Уход",
+    "parent_id": 65,
+    "external_id": "Уход",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 74,
+    "name": "Багажники и фаркопы",
+    "parent_id": 43,
+    "external_id": "Багажники и фаркопы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 75,
+    "name": "Поперечные дуги и комплектующие",
+    "parent_id": 74,
+    "external_id": "Поперечные дуги и комплектующие",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 76,
+    "name": "Рейлинги на крышу",
+    "parent_id": 74,
+    "external_id": "Рейлинги на крышу",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 77,
+    "name": "Фаркопы и комплектующие",
+    "parent_id": 74,
+    "external_id": "Фаркопы и комплектующие",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 78,
+    "name": "Крепления для перевозки велосипедов и лыж",
+    "parent_id": 74,
+    "external_id": "Крепления для перевозки велосипедов и лыж",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 79,
+    "name": "Экспедиционные багажники",
+    "parent_id": 74,
+    "external_id": "Экспедиционные багажники",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 80,
+    "name": "Автобоксы",
+    "parent_id": 74,
+    "external_id": "Автобоксы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 81,
+    "name": "КУНГ",
+    "parent_id": 74,
+    "external_id": "КУНГ",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 82,
+    "name": "Инструменты",
+    "parent_id": 43,
+    "external_id": "Инструменты",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 83,
+    "name": "Прицепы",
+    "parent_id": 43,
+    "external_id": "Прицепы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 84,
+    "name": "Бортовые",
+    "parent_id": 83,
+    "external_id": "Бортовые",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 85,
+    "name": "Для водного транспорта",
+    "parent_id": 83,
+    "external_id": "Для водного транспорта",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 86,
+    "name": "Эвакуаторы",
+    "parent_id": 83,
+    "external_id": "Эвакуаторы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 87,
+    "name": "Запчасти и комплектующие",
+    "parent_id": 83,
+    "external_id": "Запчасти и комплектующие",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 88,
+    "name": "Другое",
+    "parent_id": 83,
+    "external_id": "Другое",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 89,
+    "name": "Экипировка",
+    "parent_id": 43,
+    "external_id": "Экипировка",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 90,
+    "name": "Масла и автохимия",
+    "parent_id": 43,
+    "external_id": "Масла и автохимия",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 91,
+    "name": "Моторные масла",
+    "parent_id": 90,
+    "external_id": "Моторные масла",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 92,
+    "name": "Трансмиссионные масла",
+    "parent_id": 90,
+    "external_id": "Трансмиссионные масла",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 93,
+    "name": "Охлаждающие жидкости",
+    "parent_id": 90,
+    "external_id": "Охлаждающие жидкости",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 94,
+    "name": "Тормозные жидкости",
+    "parent_id": 90,
+    "external_id": "Тормозные жидкости",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 95,
+    "name": "Гидравлические жидкости",
+    "parent_id": 90,
+    "external_id": "Гидравлические жидкости",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 96,
+    "name": "Жидкости для омывателя стекла",
+    "parent_id": 90,
+    "external_id": "Жидкости для омывателя стекла",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 97,
+    "name": "Промывочные жидкости, присадки и смазки",
+    "parent_id": 90,
+    "external_id": "Промывочные жидкости, присадки и смазки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 98,
+    "name": "Другие масла",
+    "parent_id": 90,
+    "external_id": "Другие масла",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 99,
+    "name": "Автокосметика и аксессуары",
+    "parent_id": 90,
+    "external_id": "Автокосметика и аксессуары",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 100,
+    "name": "Топливо",
+    "parent_id": 90,
+    "external_id": "Топливо",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 101,
+    "name": "Противоугонные устройства",
+    "parent_id": 43,
+    "external_id": "Противоугонные устройства",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 102,
+    "name": "Автосигнализации",
+    "parent_id": 101,
+    "external_id": "Автосигнализации",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 103,
+    "name": "Иммобилайзеры",
+    "parent_id": 101,
+    "external_id": "Иммобилайзеры",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 104,
+    "name": "Механические блокираторы",
+    "parent_id": 101,
+    "external_id": "Механические блокираторы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 105,
+    "name": "Спутниковые системы",
+    "parent_id": 101,
+    "external_id": "Спутниковые системы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 106,
+    "name": "GPS-навигаторы",
+    "parent_id": 43,
+    "external_id": "GPS-навигаторы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 107,
+    "name": "Недвижимость",
+    "parent_id": null,
+    "external_id": "Недвижимость",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 108,
+    "name": "Купить жильё",
+    "parent_id": 107,
+    "external_id": "Купить жильё",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 109,
+    "name": "Все квартиры",
+    "parent_id": 108,
+    "external_id": "Все квартиры",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 110,
+    "name": "Вторичка",
+    "parent_id": 108,
+    "external_id": "Вторичка",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 111,
+    "name": "Новостройки",
+    "parent_id": 108,
+    "external_id": "Новостройки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 112,
+    "name": "Каталог новостроек",
+    "parent_id": 108,
+    "external_id": "Каталог новостроек",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 113,
+    "name": "Дома, дачи, коттеджи",
+    "parent_id": 108,
+    "external_id": "Дома, дачи, коттеджи",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 114,
+    "name": "Комнаты",
+    "parent_id": 108,
+    "external_id": "Комнаты",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 115,
+    "name": "Путешествия",
+    "parent_id": 107,
+    "external_id": "Путешествия",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 116,
+    "name": "Квартиры посуточно",
+    "parent_id": 115,
+    "external_id": "Квартиры посуточно",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 117,
+    "name": "Дома, дачи и коттеджи",
+    "parent_id": 115,
+    "external_id": "Дома, дачи и коттеджи",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 118,
+    "name": "Комнаты и койко-места",
+    "parent_id": 115,
+    "external_id": "Комнаты и койко-места",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 119,
+    "name": "Отели",
+    "parent_id": 115,
+    "external_id": "Отели",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 120,
+    "name": "Снять долгосрочно",
+    "parent_id": 107,
+    "external_id": "Снять долгосрочно",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 121,
+    "name": "Квартиры",
+    "parent_id": 120,
+    "external_id": "Квартиры",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 122,
+    "name": "Дома, дачи и коттеджи",
+    "parent_id": 120,
+    "external_id": "Дома, дачи и коттеджи",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 123,
+    "name": "Комнаты и койко-места",
+    "parent_id": 120,
+    "external_id": "Комнаты и койко-места",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 124,
+    "name": "Коммерческая недвижимость",
+    "parent_id": 107,
+    "external_id": "Коммерческая недвижимость",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 125,
+    "name": "Купить",
+    "parent_id": 124,
+    "external_id": "Купить",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 126,
+    "name": "Снять",
+    "parent_id": 124,
+    "external_id": "Снять",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 127,
+    "name": "Другие категории",
+    "parent_id": 107,
+    "external_id": "Другие категории",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 128,
+    "name": "Земельные участки",
+    "parent_id": 127,
+    "external_id": "Земельные участки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 129,
+    "name": "Гаражи и машиноместа",
+    "parent_id": 127,
+    "external_id": "Гаражи и машиноместа",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 130,
+    "name": "Зарубежная недвижимость",
+    "parent_id": 127,
+    "external_id": "Зарубежная недвижимость",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 131,
+    "name": "Работа",
+    "parent_id": null,
+    "external_id": "Работа",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 132,
+    "name": "Ищу работу",
+    "parent_id": 131,
+    "external_id": "Ищу работу",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 133,
+    "name": "Архитектура и дизайн",
+    "parent_id": 132,
+    "external_id": "Архитектура и дизайн",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 134,
+    "name": "Банковские и финансовые услуги",
+    "parent_id": 132,
+    "external_id": "Банковские и финансовые услуги",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 135,
+    "name": "Бытовые и персональные услуги",
+    "parent_id": 132,
+    "external_id": "Бытовые и персональные услуги",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 136,
+    "name": "Госслужба",
+    "parent_id": 132,
+    "external_id": "Госслужба",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 137,
+    "name": "Гостиничный бизнес и туризм",
+    "parent_id": 132,
+    "external_id": "Гостиничный бизнес и туризм",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 138,
+    "name": "Добыча, переработка угля, руд и других полезных ископаемых",
+    "parent_id": 132,
+    "external_id": "Добыча, переработка угля, руд и других полезных ископаемых",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 139,
+    "name": "Добыча, переработка, транспортировка нефти и газа",
+    "parent_id": 132,
+    "external_id": "Добыча, переработка, транспортировка нефти и газа",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 140,
+    "name": "Доставка, грузоперевозки и логистика",
+    "parent_id": 132,
+    "external_id": "Доставка, грузоперевозки и логистика",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 141,
+    "name": "ЖКХ и городская инфраструктура",
+    "parent_id": 132,
+    "external_id": "ЖКХ и городская инфраструктура",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 142,
+    "name": "Игорный бизнес",
+    "parent_id": 132,
+    "external_id": "Игорный бизнес",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 143,
+    "name": "Информационные технологии",
+    "parent_id": 132,
+    "external_id": "Информационные технологии",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 144,
+    "name": "Искусство и развлечения",
+    "parent_id": 132,
+    "external_id": "Искусство и развлечения",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 145,
+    "name": "Клининг",
+    "parent_id": 132,
+    "external_id": "Клининг",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 146,
+    "name": "Консалтинг",
+    "parent_id": 132,
+    "external_id": "Консалтинг",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 147,
+    "name": "Лесная и деревообрабатывающая промышленность",
+    "parent_id": 132,
+    "external_id": "Лесная и деревообрабатывающая промышленность",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 148,
+    "name": "Маркетинг, реклама и PR",
+    "parent_id": 132,
+    "external_id": "Маркетинг, реклама и PR",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 149,
+    "name": "Медицина и фармацевтика",
+    "parent_id": 132,
+    "external_id": "Медицина и фармацевтика",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 150,
+    "name": "Металлургическая промышленность",
+    "parent_id": 132,
+    "external_id": "Металлургическая промышленность",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 151,
+    "name": "НКО и общественная деятельность",
+    "parent_id": 132,
+    "external_id": "НКО и общественная деятельность",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 152,
+    "name": "Оборонная промышленность",
+    "parent_id": 132,
+    "external_id": "Оборонная промышленность",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 153,
+    "name": "Образование и наука",
+    "parent_id": 132,
+    "external_id": "Образование и наука",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 154,
+    "name": "Общественное питание",
+    "parent_id": 132,
+    "external_id": "Общественное питание",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 155,
+    "name": "Организация мероприятий",
+    "parent_id": 132,
+    "external_id": "Организация мероприятий",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 156,
+    "name": "Охрана и общественный порядок",
+    "parent_id": 132,
+    "external_id": "Охрана и общественный порядок",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 157,
+    "name": "Переработка отходов",
+    "parent_id": 132,
+    "external_id": "Переработка отходов",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 158,
+    "name": "Пищевая промышленность",
+    "parent_id": 132,
+    "external_id": "Пищевая промышленность",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 159,
+    "name": "Продажа и обслуживание автомобилей",
+    "parent_id": 132,
+    "external_id": "Продажа и обслуживание автомобилей",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 160,
+    "name": "Продажа и управление недвижимостью",
+    "parent_id": 132,
+    "external_id": "Продажа и управление недвижимостью",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 161,
+    "name": "Производство непродовольственных потребительских товаров",
+    "parent_id": 132,
+    "external_id": "Производство непродовольственных потребительских товаров",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 162,
+    "name": "Производство промышленного оборудования и станков",
+    "parent_id": 132,
+    "external_id": "Производство промышленного оборудования и станков",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 163,
+    "name": "Производство тканей, одежды и обуви",
+    "parent_id": 132,
+    "external_id": "Производство тканей, одежды и обуви",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 164,
+    "name": "Производство электро- и оптического оборудования",
+    "parent_id": 132,
+    "external_id": "Производство электро- и оптического оборудования",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 165,
+    "name": "Производство электроники и бытовой техники",
+    "parent_id": 132,
+    "external_id": "Производство электроники и бытовой техники",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 166,
+    "name": "Ракетно-космическая промышленность",
+    "parent_id": 132,
+    "external_id": "Ракетно-космическая промышленность",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 167,
+    "name": "Ремонт и отделка помещений",
+    "parent_id": 132,
+    "external_id": "Ремонт и отделка помещений",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 168,
+    "name": "Ритуальные услуги",
+    "parent_id": 132,
+    "external_id": "Ритуальные услуги",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 169,
+    "name": "Розничная и оптовая торговля",
+    "parent_id": 132,
+    "external_id": "Розничная и оптовая торговля",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 170,
+    "name": "Сельское хозяйство",
+    "parent_id": 132,
+    "external_id": "Сельское хозяйство",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 171,
+    "name": "Склады и хранилища",
+    "parent_id": 132,
+    "external_id": "Склады и хранилища",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 172,
+    "name": "СМИ и издательское дело",
+    "parent_id": 132,
+    "external_id": "СМИ и издательское дело",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 173,
+    "name": "Страхование",
+    "parent_id": 132,
+    "external_id": "Страхование",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 174,
+    "name": "Строительство жилых и коммерческих объектов",
+    "parent_id": 132,
+    "external_id": "Строительство жилых и коммерческих объектов",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 175,
+    "name": "Строительство промышленных и инфраструктурных объектов",
+    "parent_id": 132,
+    "external_id": "Строительство промышленных и инфраструктурных объектов",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 176,
+    "name": "Такси и пассажирские перевозки",
+    "parent_id": 132,
+    "external_id": "Такси и пассажирские перевозки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 177,
+    "name": "Телекоммуникации и связь",
+    "parent_id": 132,
+    "external_id": "Телекоммуникации и связь",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 178,
+    "name": "Техническое обслуживание, ремонт техники и оборудования",
+    "parent_id": 132,
+    "external_id": "Техническое обслуживание, ремонт техники и оборудования",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 179,
+    "name": "Транспортное машиностроение",
+    "parent_id": 132,
+    "external_id": "Транспортное машиностроение",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 180,
+    "name": "Тяжёлое машиностроение",
+    "parent_id": 132,
+    "external_id": "Тяжёлое машиностроение",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 181,
+    "name": "Управление персоналом",
+    "parent_id": 132,
+    "external_id": "Управление персоналом",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 182,
+    "name": "Управление транспортной инфраструктурой",
+    "parent_id": 132,
+    "external_id": "Управление транспортной инфраструктурой",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 183,
+    "name": "Фитнес-клубы, спа и салоны красоты",
+    "parent_id": 132,
+    "external_id": "Фитнес-клубы, спа и салоны красоты",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 184,
+    "name": "Химическая промышленность",
+    "parent_id": 132,
+    "external_id": "Химическая промышленность",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 185,
+    "name": "Энергетика",
+    "parent_id": 132,
+    "external_id": "Энергетика",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 186,
+    "name": "Юриспруденция",
+    "parent_id": 132,
+    "external_id": "Юриспруденция",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 187,
+    "name": "Ищу сотрудника",
+    "parent_id": 131,
+    "external_id": "Ищу сотрудника",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 188,
+    "name": "IT, интернет, телеком",
+    "parent_id": 187,
+    "external_id": "IT, интернет, телеком",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 189,
+    "name": "Автомобильный бизнес",
+    "parent_id": 187,
+    "external_id": "Автомобильный бизнес",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 190,
+    "name": "Административная работа",
+    "parent_id": 187,
+    "external_id": "Административная работа",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 191,
+    "name": "Банки, инвестиции",
+    "parent_id": 187,
+    "external_id": "Банки, инвестиции",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 192,
+    "name": "Без опыта, студенты",
+    "parent_id": 187,
+    "external_id": "Без опыта, студенты",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 193,
+    "name": "Бухгалтерия, финансы",
+    "parent_id": 187,
+    "external_id": "Бухгалтерия, финансы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 194,
+    "name": "Высший менеджмент",
+    "parent_id": 187,
+    "external_id": "Высший менеджмент",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 195,
+    "name": "Госслужба, НКО",
+    "parent_id": 187,
+    "external_id": "Госслужба, НКО",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 196,
+    "name": "Домашний персонал",
+    "parent_id": 187,
+    "external_id": "Домашний персонал",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 197,
+    "name": "ЖКХ, эксплуатация",
+    "parent_id": 187,
+    "external_id": "ЖКХ, эксплуатация",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 198,
+    "name": "Искусство, развлечения",
+    "parent_id": 187,
+    "external_id": "Искусство, развлечения",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 199,
+    "name": "Консультирование",
+    "parent_id": 187,
+    "external_id": "Консультирование",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 200,
+    "name": "Курьерская доставка",
+    "parent_id": 187,
+    "external_id": "Курьерская доставка",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 201,
+    "name": "Маркетинг, реклама, PR",
+    "parent_id": 187,
+    "external_id": "Маркетинг, реклама, PR",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 202,
+    "name": "Медицина, фармацевтика",
+    "parent_id": 187,
+    "external_id": "Медицина, фармацевтика",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 203,
+    "name": "Образование, наука",
+    "parent_id": 187,
+    "external_id": "Образование, наука",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 204,
+    "name": "Охрана, безопасность",
+    "parent_id": 187,
+    "external_id": "Охрана, безопасность",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 205,
+    "name": "Продажи",
+    "parent_id": 187,
+    "external_id": "Продажи",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 206,
+    "name": "Производство, сырьё, с/х",
+    "parent_id": 187,
+    "external_id": "Производство, сырьё, с/х",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 207,
+    "name": "Страхование",
+    "parent_id": 187,
+    "external_id": "Страхование",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 208,
+    "name": "Строительство",
+    "parent_id": 187,
+    "external_id": "Строительство",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 209,
+    "name": "Такси",
+    "parent_id": 187,
+    "external_id": "Такси",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 210,
+    "name": "Транспорт, логистика",
+    "parent_id": 187,
+    "external_id": "Транспорт, логистика",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 211,
+    "name": "Туризм, рестораны",
+    "parent_id": 187,
+    "external_id": "Туризм, рестораны",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 212,
+    "name": "Управление персоналом",
+    "parent_id": 187,
+    "external_id": "Управление персоналом",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 213,
+    "name": "Фитнес, салоны красоты",
+    "parent_id": 187,
+    "external_id": "Фитнес, салоны красоты",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 214,
+    "name": "Юриспруденция",
+    "parent_id": 187,
+    "external_id": "Юриспруденция",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 215,
+    "name": "Услуги",
+    "parent_id": null,
+    "external_id": "Услуги",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 216,
+    "name": "Автосервис, аренда",
+    "parent_id": 215,
+    "external_id": "Автосервис, аренда",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 217,
+    "name": "Автосервисы для автомобилей",
+    "parent_id": 216,
+    "external_id": "Автосервисы для автомобилей",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 218,
+    "name": "Автосервисы для грузовиков и спецтехники",
+    "parent_id": 216,
+    "external_id": "Автосервисы для грузовиков и спецтехники",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 219,
+    "name": "Автосервисы для другой техники",
+    "parent_id": 216,
+    "external_id": "Автосервисы для другой техники",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 220,
+    "name": "Аренда авто",
+    "parent_id": 216,
+    "external_id": "Аренда авто",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 221,
+    "name": "Аренда спецтехники",
+    "parent_id": 216,
+    "external_id": "Аренда спецтехники(транспорт)",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 222,
+    "name": "Грузоперевозки",
+    "parent_id": 215,
+    "external_id": "Грузоперевозки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 223,
+    "name": "По городу",
+    "parent_id": 222,
+    "external_id": "По городу",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 224,
+    "name": "Между городами",
+    "parent_id": 222,
+    "external_id": "Между городами",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 225,
+    "name": "Международные",
+    "parent_id": 222,
+    "external_id": "Международные",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 226,
+    "name": "Пассажирские перевозки",
+    "parent_id": 215,
+    "external_id": "Пассажирские перевозки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 227,
+    "name": "Трансфер",
+    "parent_id": 226,
+    "external_id": "Трансфер",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 228,
+    "name": "Авто под заказ",
+    "parent_id": 226,
+    "external_id": "Авто под заказ",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 229,
+    "name": "Другое",
+    "parent_id": 226,
+    "external_id": "Другое",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 230,
+    "name": "Грузчики, складские услуги",
+    "parent_id": 215,
+    "external_id": "Грузчики, складские услуги",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 231,
+    "name": "Грузчики",
+    "parent_id": 230,
+    "external_id": "Грузчики",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 232,
+    "name": "Фулфилмент",
+    "parent_id": 230,
+    "external_id": "Фулфилмент",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 233,
+    "name": "Услуги эвакуатора",
+    "parent_id": 215,
+    "external_id": "Услуги эвакуатора",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 234,
+    "name": "Ремонт и отделка",
+    "parent_id": 215,
+    "external_id": "Ремонт и отделка",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 235,
+    "name": "Ремонт квартир и домов под ключ",
+    "parent_id": 234,
+    "external_id": "Ремонт квартир и домов под ключ",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 236,
+    "name": "Дизайн интерьеров",
+    "parent_id": 234,
+    "external_id": "Дизайн интерьеров",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 237,
+    "name": "Сантехника",
+    "parent_id": 234,
+    "external_id": "Сантехника",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 238,
+    "name": "Электрика",
+    "parent_id": 234,
+    "external_id": "Электрика",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 239,
+    "name": "Сборка и ремонт мебели",
+    "parent_id": 234,
+    "external_id": "Сборка и ремонт мебели",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 240,
+    "name": "Окна и балконы",
+    "parent_id": 234,
+    "external_id": "Окна и балконы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 241,
+    "name": "Поклейка обоев и малярные работы",
+    "parent_id": 234,
+    "external_id": "Поклейка обоев и малярные работы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 242,
+    "name": "Потолки",
+    "parent_id": 234,
+    "external_id": "Потолки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 243,
+    "name": "Полы и напольные покрытия",
+    "parent_id": 234,
+    "external_id": "Полы и напольные покрытия",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 244,
+    "name": "Штукатурные работы",
+    "parent_id": 234,
+    "external_id": "Штукатурные работы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 245,
+    "name": "Двери",
+    "parent_id": 234,
+    "external_id": "Двери",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 246,
+    "name": "Плиточные работы",
+    "parent_id": 234,
+    "external_id": "Плиточные работы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 247,
+    "name": "Столярные и плотницкие работы",
+    "parent_id": 234,
+    "external_id": "Столярные и плотницкие работы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 248,
+    "name": "Гипсокартонные работы",
+    "parent_id": 234,
+    "external_id": "Гипсокартонные работы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 249,
+    "name": "Высотные работы",
+    "parent_id": 234,
+    "external_id": "Высотные работы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 250,
+    "name": "Изоляция и утепление",
+    "parent_id": 234,
+    "external_id": "Изоляция и утепление",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 251,
+    "name": "Ремонт коммерческих помещений",
+    "parent_id": 234,
+    "external_id": "Ремонт коммерческих помещений",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 252,
+    "name": "Вентиляция",
+    "parent_id": 234,
+    "external_id": "Вентиляция",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 253,
+    "name": "Другое",
+    "parent_id": 234,
+    "external_id": "Другое",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 254,
+    "name": "Строительство",
+    "parent_id": 215,
+    "external_id": "Строительство",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 255,
+    "name": "Строительство домов под ключ",
+    "parent_id": 254,
+    "external_id": "Строительство домов под ключ",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 256,
+    "name": "Строительство гаражей, бань, веранд",
+    "parent_id": 254,
+    "external_id": "Строительство гаражей, бань, веранд",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 257,
+    "name": "Отделка деревянных домов, бань, саун",
+    "parent_id": 254,
+    "external_id": "Отделка деревянных домов, бань, саун",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 258,
+    "name": "Кладочные работы",
+    "parent_id": 254,
+    "external_id": "Кладочные работы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 259,
+    "name": "Кровельные работы",
+    "parent_id": 254,
+    "external_id": "Кровельные работы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 260,
+    "name": "Сварка, ковка, металлоконструкции",
+    "parent_id": 254,
+    "external_id": "Сварка, ковка, металлоконструкции",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 261,
+    "name": "Фундаментные и бетонные работы",
+    "parent_id": 254,
+    "external_id": "Фундаментные и бетонные работы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 262,
+    "name": "Алмазное сверление и резка",
+    "parent_id": 254,
+    "external_id": "Алмазное сверление и резка",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 263,
+    "name": "Снос и демонтаж",
+    "parent_id": 254,
+    "external_id": "Снос и демонтаж",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 264,
+    "name": "Фасадные работы",
+    "parent_id": 254,
+    "external_id": "Фасадные работы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 265,
+    "name": "Проектирование и сметы",
+    "parent_id": 254,
+    "external_id": "Проектирование и сметы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 266,
+    "name": "Разнорабочие",
+    "parent_id": 254,
+    "external_id": "Разнорабочие",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 267,
+    "name": "Изыскательные работы",
+    "parent_id": 254,
+    "external_id": "Изыскательные работы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 268,
+    "name": "Лестницы",
+    "parent_id": 254,
+    "external_id": "Лестницы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 269,
+    "name": "Газификация",
+    "parent_id": 254,
+    "external_id": "Газификация",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 270,
+    "name": "Другое",
+    "parent_id": 254,
+    "external_id": "Другое",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 271,
+    "name": "Мастер на час и вскрытие замков",
+    "parent_id": 215,
+    "external_id": "Мастер на час и вскрытие замков",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 272,
+    "name": "Вскрытие и ремонт замков",
+    "parent_id": 271,
+    "external_id": "Вскрытие и ремонт замков",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 273,
+    "name": "Мастер на час",
+    "parent_id": 271,
+    "external_id": "Мастер на час",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 274,
+    "name": "Сад, благоустройство",
+    "parent_id": 215,
+    "external_id": "Сад, благоустройство",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 275,
+    "name": "Скважины, септики, колодцы",
+    "parent_id": 274,
+    "external_id": "Скважины, септики, колодцы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 276,
+    "name": "Водоёмы и фонтаны",
+    "parent_id": 274,
+    "external_id": "Водоёмы и фонтаны",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 277,
+    "name": "Дорожное строительство",
+    "parent_id": 274,
+    "external_id": "Дорожное строительство",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 278,
+    "name": "Ограждения, навесы, рольставни",
+    "parent_id": 274,
+    "external_id": "Ограждения, навесы, рольставни",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 279,
+    "name": "Земляные работы",
+    "parent_id": 274,
+    "external_id": "Земляные работы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 280,
+    "name": "Озеленение, уход за садом и огородом",
+    "parent_id": 274,
+    "external_id": "Озеленение, уход за садом и огородом",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 281,
+    "name": "Другое",
+    "parent_id": 274,
+    "external_id": "Другое",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 282,
+    "name": "Красота",
+    "parent_id": 215,
+    "external_id": "Красота",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 283,
+    "name": "Маникюр, педикюр",
+    "parent_id": 282,
+    "external_id": "Маникюр, педикюр",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 284,
+    "name": "Услуги парикмахера",
+    "parent_id": 282,
+    "external_id": "Услуги парикмахера",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 285,
+    "name": "Ресницы, брови",
+    "parent_id": 282,
+    "external_id": "Ресницы, брови",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 286,
+    "name": "Перманентный макияж",
+    "parent_id": 282,
+    "external_id": "Перманентный макияж",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 287,
+    "name": "Косметология",
+    "parent_id": 282,
+    "external_id": "Косметология",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 288,
+    "name": "Эпиляция",
+    "parent_id": 282,
+    "external_id": "Эпиляция",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 289,
+    "name": "Макияж",
+    "parent_id": 282,
+    "external_id": "Макияж",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 290,
+    "name": "СПА-услуги, массаж",
+    "parent_id": 282,
+    "external_id": "СПА-услуги, массаж",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 291,
+    "name": "Тату, пирсинг",
+    "parent_id": 282,
+    "external_id": "Тату, пирсинг",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 292,
+    "name": "Аренда рабочего места",
+    "parent_id": 282,
+    "external_id": "Аренда рабочего места",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 293,
+    "name": "Другое",
+    "parent_id": 282,
+    "external_id": "Другое",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 294,
+    "name": "Здоровье",
+    "parent_id": 215,
+    "external_id": "Здоровье",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 295,
+    "name": "Психология",
+    "parent_id": 294,
+    "external_id": "Психология",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 296,
+    "name": "Диетология",
+    "parent_id": 294,
+    "external_id": "Диетология",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 297,
+    "name": "Фитнес, йога",
+    "parent_id": 294,
+    "external_id": "Фитнес, йога",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 298,
+    "name": "Стоматология",
+    "parent_id": 294,
+    "external_id": "Стоматология",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 299,
+    "name": "Другое",
+    "parent_id": 294,
+    "external_id": "Другое",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 300,
+    "name": "Ремонт и обслуживание техники",
+    "parent_id": 215,
+    "external_id": "Ремонт и обслуживание техники",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 301,
+    "name": "Телевизоры",
+    "parent_id": 300,
+    "external_id": "Телевизоры",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 302,
+    "name": "Мобильные устройства",
+    "parent_id": 300,
+    "external_id": "Мобильные устройства",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 303,
+    "name": "Фото-, аудио-, видеотехника",
+    "parent_id": 300,
+    "external_id": "Фото-, аудио-, видеотехника",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 304,
+    "name": "Кондиционеры, вентиляция",
+    "parent_id": 300,
+    "external_id": "Кондиционеры, вентиляция",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 305,
+    "name": "Стиральные, сушильные машины",
+    "parent_id": 300,
+    "external_id": "Стиральные, сушильные машины",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 306,
+    "name": "Посудомоечные машины",
+    "parent_id": 300,
+    "external_id": "Посудомоечные машины",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 307,
+    "name": "Холодильники, морозильные камеры",
+    "parent_id": 300,
+    "external_id": "Холодильники, морозильные камеры",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 308,
+    "name": "Варочные панели, духовые шкафы",
+    "parent_id": 300,
+    "external_id": "Варочные панели, духовые шкафы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 309,
+    "name": "Газовые котлы, водонагреватели",
+    "parent_id": 300,
+    "external_id": "Газовые котлы, водонагреватели",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 310,
+    "name": "Кофемашины",
+    "parent_id": 300,
+    "external_id": "Кофемашины",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 311,
+    "name": "Швейные машины, оверлоки",
+    "parent_id": 300,
+    "external_id": "Швейные машины, оверлоки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 312,
+    "name": "Другое",
+    "parent_id": 300,
+    "external_id": "Другое",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 313,
+    "name": "Компьютерная помощь",
+    "parent_id": 215,
+    "external_id": "Компьютерная помощь",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 314,
+    "name": "Компьютеры",
+    "parent_id": 313,
+    "external_id": "Компьютеры",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 315,
+    "name": "Принтеры",
+    "parent_id": 313,
+    "external_id": "Принтеры",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 316,
+    "name": "Оборудование для майнинга",
+    "parent_id": 313,
+    "external_id": "Оборудование для майнинга",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 317,
+    "name": "Игровые приставки",
+    "parent_id": 313,
+    "external_id": "Игровые приставки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 318,
+    "name": "ОС и программы",
+    "parent_id": 313,
+    "external_id": "ОС и программы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 319,
+    "name": "Интернет и другие сети",
+    "parent_id": 313,
+    "external_id": "Интернет и другие сети",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 320,
+    "name": "Монтаж и установка техники",
+    "parent_id": 215,
+    "external_id": "Монтаж и установка техники",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 321,
+    "name": "Оборудование, производство",
+    "parent_id": 215,
+    "external_id": "Оборудование, производство",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 322,
+    "name": "Аренда оборудования",
+    "parent_id": 321,
+    "external_id": "Аренда оборудования",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 323,
+    "name": "Производство, обработка",
+    "parent_id": 321,
+    "external_id": "Производство, обработка",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 324,
+    "name": "Обучение, курсы",
+    "parent_id": 215,
+    "external_id": "Обучение, курсы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 325,
+    "name": "Предметы школы и вуза",
+    "parent_id": 324,
+    "external_id": "Предметы школы и вуза",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 326,
+    "name": "Иностранные языки",
+    "parent_id": 324,
+    "external_id": "Иностранные языки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 327,
+    "name": "Детское развитие, логопеды",
+    "parent_id": 324,
+    "external_id": "Детское развитие, логопеды",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 328,
+    "name": "IT, бизнес",
+    "parent_id": 324,
+    "external_id": "IT, бизнес",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 329,
+    "name": "Дизайн, рисование",
+    "parent_id": 324,
+    "external_id": "Дизайн, рисование",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 330,
+    "name": "Красота, здоровье",
+    "parent_id": 324,
+    "external_id": "Красота, здоровье",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 331,
+    "name": "Спорт, танцы",
+    "parent_id": 324,
+    "external_id": "Спорт, танцы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 332,
+    "name": "Вождение",
+    "parent_id": 324,
+    "external_id": "Вождение",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 333,
+    "name": "Музыка, театр",
+    "parent_id": 324,
+    "external_id": "Музыка, театр",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 334,
+    "name": "Профессиональная подготовка",
+    "parent_id": 324,
+    "external_id": "Профессиональная подготовка",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 335,
+    "name": "Другое",
+    "parent_id": 324,
+    "external_id": "Другое",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 336,
+    "name": "Деловые услуги",
+    "parent_id": 215,
+    "external_id": "Деловые услуги",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 337,
+    "name": "Бухгалтерия, финансы",
+    "parent_id": 336,
+    "external_id": "Бухгалтерия, финансы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 338,
+    "name": "Консультирование",
+    "parent_id": 336,
+    "external_id": "Консультирование",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 339,
+    "name": "Консультации по недвижимости",
+    "parent_id": 336,
+    "external_id": "Консультации по недвижимости",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 340,
+    "name": "Юридические услуги",
+    "parent_id": 336,
+    "external_id": "Юридические услуги",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 341,
+    "name": "Страхование",
+    "parent_id": 215,
+    "external_id": "Страхование",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 342,
+    "name": "Услуги посредников",
+    "parent_id": 215,
+    "external_id": "Услуги посредников",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 343,
+    "name": "Полиграфия, наружная реклама",
+    "parent_id": 215,
+    "external_id": "Полиграфия, наружная реклама",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 344,
+    "name": "IT, дизайн, маркетинг",
+    "parent_id": 215,
+    "external_id": "IT, дизайн, маркетинг",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 345,
+    "name": "Реклама, PR, маркетинг",
+    "parent_id": 344,
+    "external_id": "Реклама, PR, маркетинг",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 346,
+    "name": "Графический дизайн",
+    "parent_id": 344,
+    "external_id": "Графический дизайн",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 347,
+    "name": "Программирование, настройка CRM",
+    "parent_id": 344,
+    "external_id": "Программирование, настройка CRM",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 348,
+    "name": "Создание сайтов и приложений",
+    "parent_id": 344,
+    "external_id": "Создание сайтов и приложений",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 349,
+    "name": "Тексты, переводы",
+    "parent_id": 344,
+    "external_id": "Тексты, переводы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 350,
+    "name": "Маркетплейсы, сервисы объявлений, карты",
+    "parent_id": 344,
+    "external_id": "Маркетплейсы, сервисы объявлений, карты",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 351,
+    "name": "Продвижение, соцсети",
+    "parent_id": 344,
+    "external_id": "Продвижение, соцсети",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 352,
+    "name": "SEO, контекстная реклама",
+    "parent_id": 344,
+    "external_id": "SEO, контекстная реклама",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 353,
+    "name": "Веб- и мобильный дизайн",
+    "parent_id": 344,
+    "external_id": "Веб- и мобильный дизайн",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 354,
+    "name": "Инфографика для маркетплейсов",
+    "parent_id": 344,
+    "external_id": "Инфографика для маркетплейсов",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 355,
+    "name": "Вывоз мусора и вторсырья",
+    "parent_id": 215,
+    "external_id": "Вывоз мусора и вторсырья",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 356,
+    "name": "Вывоз мусора",
+    "parent_id": 355,
+    "external_id": "Вывоз мусора",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 357,
+    "name": "Приём вторсырья",
+    "parent_id": 355,
+    "external_id": "Приём вторсырья",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 358,
+    "name": "Уборка",
+    "parent_id": 215,
+    "external_id": "Уборка",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 359,
+    "name": "Генеральная уборка",
+    "parent_id": 358,
+    "external_id": "Генеральная уборка",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 360,
+    "name": "Мойка окон",
+    "parent_id": 358,
+    "external_id": "Мойка окон",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 361,
+    "name": "Простая уборка",
+    "parent_id": 358,
+    "external_id": "Простая уборка",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 362,
+    "name": "Чистка ковров",
+    "parent_id": 358,
+    "external_id": "Чистка ковров",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 363,
+    "name": "Чистка мягкой мебели",
+    "parent_id": 358,
+    "external_id": "Чистка мягкой мебели",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 364,
+    "name": "Дезинфекция, дезинсекция, спецуборка",
+    "parent_id": 215,
+    "external_id": "Дезинфекция, дезинсекция, спецуборка",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 365,
+    "name": "Бытовые услуги",
+    "parent_id": 215,
+    "external_id": "Бытовые услуги",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 366,
+    "name": "Изготовление ключей",
+    "parent_id": 365,
+    "external_id": "Изготовление ключей",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 367,
+    "name": "Пошив и ремонт одежды и других изделий",
+    "parent_id": 365,
+    "external_id": "Пошив и ремонт одежды и других изделий",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 368,
+    "name": "Ремонт часов",
+    "parent_id": 365,
+    "external_id": "Ремонт часов",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 369,
+    "name": "Химчистка, стирка",
+    "parent_id": 365,
+    "external_id": "Химчистка, стирка",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 370,
+    "name": "Ювелирные услуги",
+    "parent_id": 365,
+    "external_id": "Ювелирные услуги",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 371,
+    "name": "Праздники, мероприятия",
+    "parent_id": 215,
+    "external_id": "Праздники, мероприятия",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 372,
+    "name": "Организация и проведение мероприятий",
+    "parent_id": 371,
+    "external_id": "Организация и проведение мероприятий",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 373,
+    "name": "Оформление и декор",
+    "parent_id": 371,
+    "external_id": "Оформление и декор",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 374,
+    "name": "Прокат и аренда для мероприятий",
+    "parent_id": 371,
+    "external_id": "Прокат и аренда для мероприятий",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 375,
+    "name": "Организация досуга и отдыха",
+    "parent_id": 371,
+    "external_id": "Организация досуга и отдыха",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 376,
+    "name": "Доставка продуктов, десертов, кейтеринг",
+    "parent_id": 215,
+    "external_id": "Доставка продуктов, десертов, кейтеринг",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 377,
+    "name": "Доставка готовой еды",
+    "parent_id": 376,
+    "external_id": "Доставка готовой еды",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 378,
+    "name": "Торты и десерты на заказ",
+    "parent_id": 376,
+    "external_id": "Торты и десерты на заказ",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 379,
+    "name": "Кейтеринг, официанты, повара, бармены",
+    "parent_id": 376,
+    "external_id": "Кейтеринг, официанты, повара, бармены",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 380,
+    "name": "Фото- и видеосъёмка",
+    "parent_id": 215,
+    "external_id": "Фото- и видеосъёмка",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 381,
+    "name": "Фотосъёмка",
+    "parent_id": 380,
+    "external_id": "Фотосъёмка",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 382,
+    "name": "Видеосъёмка",
+    "parent_id": 380,
+    "external_id": "Видеосъёмка",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 383,
+    "name": "Аренда фотостудии",
+    "parent_id": 380,
+    "external_id": "Аренда фотостудии",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 384,
+    "name": "Няни, сиделки",
+    "parent_id": 215,
+    "external_id": "Няни, сиделки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 385,
+    "name": "Уход за животными",
+    "parent_id": 215,
+    "external_id": "Уход за животными",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 386,
+    "name": "Искусство",
+    "parent_id": 215,
+    "external_id": "Искусство",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 387,
+    "name": "Музыка, стихи, песни на заказ",
+    "parent_id": 386,
+    "external_id": "Музыка, стихи, песни на заказ",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 388,
+    "name": "Услуги художников",
+    "parent_id": 386,
+    "external_id": "Услуги художников",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 389,
+    "name": "Кастомизация",
+    "parent_id": 386,
+    "external_id": "Кастомизация",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 390,
+    "name": "Рукоделие на заказ",
+    "parent_id": 386,
+    "external_id": "Рукоделие на заказ",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 391,
+    "name": "Охрана, безопасность",
+    "parent_id": 215,
+    "external_id": "Охрана, безопасность",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 392,
+    "name": "Другое",
+    "parent_id": 215,
+    "external_id": "Другое",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 393,
+    "name": "Личные вещи",
+    "parent_id": null,
+    "external_id": "Личные вещи",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 394,
+    "name": "Одежда, обувь, аксессуары",
+    "parent_id": 393,
+    "external_id": "Одежда, обувь, аксессуары",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 395,
+    "name": "Женская одежда",
+    "parent_id": 394,
+    "external_id": "Женская одежда",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 396,
+    "name": "Женская обувь",
+    "parent_id": 394,
+    "external_id": "Женская обувь",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 397,
+    "name": "Мужская одежда",
+    "parent_id": 394,
+    "external_id": "Мужская одежда",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 398,
+    "name": "Мужская обувь",
+    "parent_id": 394,
+    "external_id": "Мужская обувь",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 399,
+    "name": "Сумки, рюкзаки и чемоданы",
+    "parent_id": 394,
+    "external_id": "Сумки, рюкзаки и чемоданы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 400,
+    "name": "Аксессуары",
+    "parent_id": 394,
+    "external_id": "Аксессуары",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 401,
+    "name": "Детская одежда и обувь",
+    "parent_id": 393,
+    "external_id": "Детская одежда и обувь",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 402,
+    "name": "Для девочек",
+    "parent_id": 401,
+    "external_id": "Для девочек",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 403,
+    "name": "Для мальчиков",
+    "parent_id": 401,
+    "external_id": "Для мальчиков",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 404,
+    "name": "Товары для детей и игрушки",
+    "parent_id": 393,
+    "external_id": "Товары для детей и игрушки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 405,
+    "name": "Автомобильные кресла",
+    "parent_id": 404,
+    "external_id": "Автомобильные кресла",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 406,
+    "name": "Самокаты и беговелы",
+    "parent_id": 404,
+    "external_id": "Самокаты и беговелы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 407,
+    "name": "Детская мебель",
+    "parent_id": 404,
+    "external_id": "Детская мебель",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 408,
+    "name": "Детские коляски",
+    "parent_id": 404,
+    "external_id": "Детские коляски",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 409,
+    "name": "Игрушки",
+    "parent_id": 404,
+    "external_id": "Игрушки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 410,
+    "name": "Постельные принадлежности",
+    "parent_id": 404,
+    "external_id": "Постельные принадлежности",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 411,
+    "name": "Товары для кормления",
+    "parent_id": 404,
+    "external_id": "Товары для кормления",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 412,
+    "name": "Товары для купания",
+    "parent_id": 404,
+    "external_id": "Товары для купания",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 413,
+    "name": "Товары для школы",
+    "parent_id": 404,
+    "external_id": "Товары для школы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 414,
+    "name": "Детская гигиена",
+    "parent_id": 404,
+    "external_id": "Детская гигиена",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 415,
+    "name": "Красота и здоровье",
+    "parent_id": 393,
+    "external_id": "Красота и здоровье",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 416,
+    "name": "Приборы и аксессуары",
+    "parent_id": 415,
+    "external_id": "Приборы и аксессуары",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 417,
+    "name": "Парфюмерия",
+    "parent_id": 415,
+    "external_id": "Парфюмерия",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 418,
+    "name": "Уход и гигиена",
+    "parent_id": 415,
+    "external_id": "Уход и гигиена",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 419,
+    "name": "Макияж и маникюр",
+    "parent_id": 415,
+    "external_id": "Макияж и маникюр",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 420,
+    "name": "Средства для волос",
+    "parent_id": 415,
+    "external_id": "Средства для волос",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 421,
+    "name": "Медицинские изделия",
+    "parent_id": 415,
+    "external_id": "Медицинские изделия",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 422,
+    "name": "Другое",
+    "parent_id": 415,
+    "external_id": "Другое",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 423,
+    "name": "Часы и украшения",
+    "parent_id": 393,
+    "external_id": "Часы и украшения",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 424,
+    "name": "Ювелирные изделия",
+    "parent_id": 423,
+    "external_id": "Ювелирные изделия",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 425,
+    "name": "Часы",
+    "parent_id": 423,
+    "external_id": "Часы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 426,
+    "name": "Бижутерия",
+    "parent_id": 423,
+    "external_id": "Бижутерия",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 427,
+    "name": "Для дома и дачи",
+    "parent_id": null,
+    "external_id": "Для дома и дачи",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 428,
+    "name": "Ремонт и строительство",
+    "parent_id": 427,
+    "external_id": "Ремонт и строительство",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 429,
+    "name": "Двери",
+    "parent_id": 428,
+    "external_id": "Двери",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 430,
+    "name": "Инструменты",
+    "parent_id": 428,
+    "external_id": "Инструменты",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 431,
+    "name": "Камины и обогреватели",
+    "parent_id": 428,
+    "external_id": "Камины и обогреватели",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 432,
+    "name": "Окна и балконы",
+    "parent_id": 428,
+    "external_id": "Окна и балконы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 433,
+    "name": "Потолки",
+    "parent_id": 428,
+    "external_id": "Потолки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 434,
+    "name": "Для сада и дачи",
+    "parent_id": 428,
+    "external_id": "Для сада и дачи",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 435,
+    "name": "Сантехника, водоснабжение и сауна",
+    "parent_id": 428,
+    "external_id": "Сантехника, водоснабжение и сауна",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 436,
+    "name": "Стройматериалы",
+    "parent_id": 428,
+    "external_id": "Стройматериалы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 437,
+    "name": "Готовые строения и срубы",
+    "parent_id": 428,
+    "external_id": "Готовые строения и срубы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 438,
+    "name": "Ворота, заборы и ограждения",
+    "parent_id": 428,
+    "external_id": "Ворота, заборы и ограждения",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 439,
+    "name": "Мебель и интерьер",
+    "parent_id": 427,
+    "external_id": "Мебель и интерьер",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 440,
+    "name": "Компьютерные столы и кресла",
+    "parent_id": 439,
+    "external_id": "Компьютерные столы и кресла",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 441,
+    "name": "Кровати, диваны и кресла",
+    "parent_id": 439,
+    "external_id": "Кровати, диваны и кресла",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 442,
+    "name": "Кухонные гарнитуры",
+    "parent_id": 439,
+    "external_id": "Кухонные гарнитуры",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 443,
+    "name": "Освещение",
+    "parent_id": 439,
+    "external_id": "Освещение",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 444,
+    "name": "Подставки и тумбы",
+    "parent_id": 439,
+    "external_id": "Подставки и тумбы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 445,
+    "name": "Предметы интерьера, искусство",
+    "parent_id": 439,
+    "external_id": "Предметы интерьера, искусство",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 446,
+    "name": "Столы и стулья",
+    "parent_id": 439,
+    "external_id": "Столы и стулья",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 447,
+    "name": "Текстиль и ковры",
+    "parent_id": 439,
+    "external_id": "Текстиль и ковры",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 448,
+    "name": "Шкафы, комоды и стеллажи",
+    "parent_id": 439,
+    "external_id": "Шкафы, комоды и стеллажи",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 449,
+    "name": "Садовая мебель",
+    "parent_id": 439,
+    "external_id": "Садовая мебель",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 450,
+    "name": "Другое",
+    "parent_id": 439,
+    "external_id": "Другое",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 451,
+    "name": "Бытовая техника",
+    "parent_id": 427,
+    "external_id": "Бытовая техника",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 452,
+    "name": "Для кухни",
+    "parent_id": 451,
+    "external_id": "Для кухни",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 453,
+    "name": "Для дома",
+    "parent_id": 451,
+    "external_id": "Для дома",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 454,
+    "name": "Климатическое оборудование",
+    "parent_id": 451,
+    "external_id": "Климатическое оборудование",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 455,
+    "name": "Для индивидуального ухода",
+    "parent_id": 451,
+    "external_id": "Для индивидуального ухода",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 456,
+    "name": "Другое",
+    "parent_id": 451,
+    "external_id": "Другое",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 457,
+    "name": "Продукты питания",
+    "parent_id": 427,
+    "external_id": "Продукты питания",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 458,
+    "name": "Чай, кофе, какао",
+    "parent_id": 457,
+    "external_id": "Чай, кофе, какао",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 459,
+    "name": "Напитки",
+    "parent_id": 457,
+    "external_id": "Напитки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 460,
+    "name": "Рыба, морепродукты, икра",
+    "parent_id": 457,
+    "external_id": "Рыба, морепродукты, икра",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 461,
+    "name": "Мясо, птица, субпродукты",
+    "parent_id": 457,
+    "external_id": "Мясо, птица, субпродукты",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 462,
+    "name": "Кондитерские изделия",
+    "parent_id": 457,
+    "external_id": "Кондитерские изделия",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 463,
+    "name": "Мёд",
+    "parent_id": 457,
+    "external_id": "Мёд",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 464,
+    "name": "Бакалея",
+    "parent_id": 457,
+    "external_id": "Бакалея",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 465,
+    "name": "Овощи и зелень",
+    "parent_id": 457,
+    "external_id": "Овощи и зелень",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 466,
+    "name": "Молочные продукты, сыры, яйца",
+    "parent_id": 457,
+    "external_id": "Молочные продукты, сыры, яйца",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 467,
+    "name": "Фрукты и ягоды",
+    "parent_id": 457,
+    "external_id": "Фрукты и ягоды",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 468,
+    "name": "Хлеб и выпечка",
+    "parent_id": 457,
+    "external_id": "Хлеб и выпечка",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 469,
+    "name": "Специализированное питание",
+    "parent_id": 457,
+    "external_id": "Специализированное питание",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 470,
+    "name": "Другое",
+    "parent_id": 457,
+    "external_id": "Другое",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 471,
+    "name": "Растения",
+    "parent_id": 427,
+    "external_id": "Растения",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 472,
+    "name": "Комнатные растения",
+    "parent_id": 471,
+    "external_id": "Комнатные растения",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 473,
+    "name": "Букеты",
+    "parent_id": 471,
+    "external_id": "Букеты",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 474,
+    "name": "Садовые растения",
+    "parent_id": 471,
+    "external_id": "Садовые растения",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 475,
+    "name": "Семена, луковицы, клубни",
+    "parent_id": 471,
+    "external_id": "Семена, луковицы, клубни",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 476,
+    "name": "Товары для ухода за растениями",
+    "parent_id": 471,
+    "external_id": "Товары для ухода за растениями",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 477,
+    "name": "Панно и искусственные растения",
+    "parent_id": 471,
+    "external_id": "Панно и искусственные растения",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 478,
+    "name": "Другое",
+    "parent_id": 471,
+    "external_id": "Другое",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 479,
+    "name": "Посуда и товары для кухни",
+    "parent_id": 427,
+    "external_id": "Посуда и товары для кухни",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 480,
+    "name": "Посуда",
+    "parent_id": 479,
+    "external_id": "Посуда",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 481,
+    "name": "Товары для кухни",
+    "parent_id": 479,
+    "external_id": "Товары для кухни",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 482,
+    "name": "Запчасти и аксессуары",
+    "parent_id": null,
+    "external_id": "Запчасти и аксессуары(транспорт1)",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 483,
+    "name": "Запчасти",
+    "parent_id": 482,
+    "external_id": "Запчасти",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 484,
+    "name": "Для автомобилей",
+    "parent_id": 483,
+    "external_id": "Для автомобилей",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 485,
+    "name": "Для мототехники",
+    "parent_id": 483,
+    "external_id": "Для мототехники",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 486,
+    "name": "Для грузовиков и спецтехники",
+    "parent_id": 483,
+    "external_id": "Для грузовиков и спецтехники",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 487,
+    "name": "Для водного транспорта",
+    "parent_id": 483,
+    "external_id": "Для водного транспорта",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 488,
+    "name": "Шины, диски и колёса",
+    "parent_id": 482,
+    "external_id": "Шины, диски и колёса",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 489,
+    "name": "Шины",
+    "parent_id": 488,
+    "external_id": "Шины",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 490,
+    "name": "Шины для грузовиков и спецтехники",
+    "parent_id": 488,
+    "external_id": "Шины для грузовиков и спецтехники",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 491,
+    "name": "Мотошины",
+    "parent_id": 488,
+    "external_id": "Мотошины",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 492,
+    "name": "Диски",
+    "parent_id": 488,
+    "external_id": "Диски",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 493,
+    "name": "Колпаки",
+    "parent_id": 488,
+    "external_id": "Колпаки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 494,
+    "name": "Колёса",
+    "parent_id": 488,
+    "external_id": "Колёса",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 495,
+    "name": "Аудио- и видеотехника",
+    "parent_id": 482,
+    "external_id": "Аудио- и видеотехника",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 496,
+    "name": "Аксессуары для автоакустики",
+    "parent_id": 495,
+    "external_id": "Аксессуары для автоакустики",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 497,
+    "name": "Другое",
+    "parent_id": 495,
+    "external_id": "Другое",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 498,
+    "name": "Магнитолы",
+    "parent_id": 495,
+    "external_id": "Магнитолы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 499,
+    "name": "Автоакустика",
+    "parent_id": 495,
+    "external_id": "Автоакустика",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 500,
+    "name": "Видеорегистраторы",
+    "parent_id": 495,
+    "external_id": "Видеорегистраторы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 501,
+    "name": "Усилители",
+    "parent_id": 495,
+    "external_id": "Усилители",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 502,
+    "name": "Переходные рамки",
+    "parent_id": 495,
+    "external_id": "Переходные рамки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 503,
+    "name": "Короба и подиумы",
+    "parent_id": 495,
+    "external_id": "Короба и подиумы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 504,
+    "name": "Аксессуары",
+    "parent_id": 482,
+    "external_id": "Аксессуары(транспорт)",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 505,
+    "name": "Для мото- и водного транспорта",
+    "parent_id": 504,
+    "external_id": "Для мото- и водного транспорта",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 506,
+    "name": "Щётки стеклоочистителя",
+    "parent_id": 504,
+    "external_id": "Щётки стеклоочистителя",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 507,
+    "name": "Для салона",
+    "parent_id": 504,
+    "external_id": "Для салона",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 508,
+    "name": "Защита и декор",
+    "parent_id": 504,
+    "external_id": "Защита и декор",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 509,
+    "name": "Набор автомобилиста",
+    "parent_id": 504,
+    "external_id": "Набор автомобилиста",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 510,
+    "name": "Для колёс",
+    "parent_id": 504,
+    "external_id": "Для колёс",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 511,
+    "name": "Отопительное оборудование",
+    "parent_id": 504,
+    "external_id": "Отопительное оборудование",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 512,
+    "name": "Уход",
+    "parent_id": 504,
+    "external_id": "Уход",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 513,
+    "name": "Багажники и фаркопы",
+    "parent_id": 482,
+    "external_id": "Багажники и фаркопы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 514,
+    "name": "Поперечные дуги и комплектующие",
+    "parent_id": 513,
+    "external_id": "Поперечные дуги и комплектующие",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 515,
+    "name": "Рейлинги на крышу",
+    "parent_id": 513,
+    "external_id": "Рейлинги на крышу",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 516,
+    "name": "Фаркопы и комплектующие",
+    "parent_id": 513,
+    "external_id": "Фаркопы и комплектующие",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 517,
+    "name": "Крепления для перевозки велосипедов и лыж",
+    "parent_id": 513,
+    "external_id": "Крепления для перевозки велосипедов и лыж",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 518,
+    "name": "Экспедиционные багажники",
+    "parent_id": 513,
+    "external_id": "Экспедиционные багажники",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 519,
+    "name": "Автобоксы",
+    "parent_id": 513,
+    "external_id": "Автобоксы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 520,
+    "name": "КУНГ",
+    "parent_id": 513,
+    "external_id": "КУНГ",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 521,
+    "name": "Инструменты",
+    "parent_id": 482,
+    "external_id": "Инструменты",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 522,
+    "name": "Прицепы",
+    "parent_id": 482,
+    "external_id": "Прицепы(транспорт)",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 523,
+    "name": "Бортовые",
+    "parent_id": 522,
+    "external_id": "Бортовые",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 524,
+    "name": "Для водного транспорта",
+    "parent_id": 522,
+    "external_id": "Для водного транспорта",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 525,
+    "name": "Эвакуаторы",
+    "parent_id": 522,
+    "external_id": "Эвакуаторы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 526,
+    "name": "Запчасти и комплектующие",
+    "parent_id": 522,
+    "external_id": "Запчасти и комплектующие",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 527,
+    "name": "Другое",
+    "parent_id": 522,
+    "external_id": "Другое",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 528,
+    "name": "Экипировка",
+    "parent_id": 482,
+    "external_id": "Экипировка",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 529,
+    "name": "Масла и автохимия",
+    "parent_id": 482,
+    "external_id": "Масла и автохимия",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 530,
+    "name": "Моторные масла",
+    "parent_id": 529,
+    "external_id": "Моторные масла",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 531,
+    "name": "Трансмиссионные масла",
+    "parent_id": 529,
+    "external_id": "Трансмиссионные масла",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 532,
+    "name": "Охлаждающие жидкости",
+    "parent_id": 529,
+    "external_id": "Охлаждающие жидкости",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 533,
+    "name": "Тормозные жидкости",
+    "parent_id": 529,
+    "external_id": "Тормозные жидкости",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 534,
+    "name": "Гидравлические жидкости",
+    "parent_id": 529,
+    "external_id": "Гидравлические жидкости",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 535,
+    "name": "Жидкости для омывателя стекла",
+    "parent_id": 529,
+    "external_id": "Жидкости для омывателя стекла",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 536,
+    "name": "Промывочные жидкости, присадки и смазки",
+    "parent_id": 529,
+    "external_id": "Промывочные жидкости, присадки и смазки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 537,
+    "name": "Другие масла",
+    "parent_id": 529,
+    "external_id": "Другие масла",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 538,
+    "name": "Автокосметика и аксессуары",
+    "parent_id": 529,
+    "external_id": "Автокосметика и аксессуары",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 539,
+    "name": "Топливо",
+    "parent_id": 529,
+    "external_id": "Топливо",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 540,
+    "name": "Противоугонные устройства",
+    "parent_id": 482,
+    "external_id": "Противоугонные устройства",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 541,
+    "name": "Автосигнализации",
+    "parent_id": 540,
+    "external_id": "Автосигнализации",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 542,
+    "name": "Иммобилайзеры",
+    "parent_id": 540,
+    "external_id": "Иммобилайзеры",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 543,
+    "name": "Механические блокираторы",
+    "parent_id": 540,
+    "external_id": "Механические блокираторы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 544,
+    "name": "Спутниковые системы",
+    "parent_id": 540,
+    "external_id": "Спутниковые системы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 545,
+    "name": "GPS-навигаторы",
+    "parent_id": 482,
+    "external_id": "GPS-навигаторы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 546,
+    "name": "Электроника",
+    "parent_id": null,
+    "external_id": "Электроника",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 547,
+    "name": "Телефоны",
+    "parent_id": 546,
+    "external_id": "Телефоны",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 548,
+    "name": "Мобильные телефоны",
+    "parent_id": 547,
+    "external_id": "Мобильные телефоны",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 549,
+    "name": "Аксессуары",
+    "parent_id": 547,
+    "external_id": "Аксессуары",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 550,
+    "name": "Рации",
+    "parent_id": 547,
+    "external_id": "Рации",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 551,
+    "name": "Стационарные телефоны",
+    "parent_id": 547,
+    "external_id": "Стационарные телефоны",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 552,
+    "name": "Аудио и видео",
+    "parent_id": 546,
+    "external_id": "Аудио и видео",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 553,
+    "name": "Телевизоры и проекторы",
+    "parent_id": 552,
+    "external_id": "Телевизоры и проекторы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 554,
+    "name": "Наушники",
+    "parent_id": 552,
+    "external_id": "Наушники",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 555,
+    "name": "Акустика, колонки, сабвуферы",
+    "parent_id": 552,
+    "external_id": "Акустика, колонки, сабвуферы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 556,
+    "name": "Аксессуары",
+    "parent_id": 552,
+    "external_id": "Аксессуары",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 557,
+    "name": "Музыкальные центры, магнитолы",
+    "parent_id": 552,
+    "external_id": "Музыкальные центры, магнитолы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 558,
+    "name": "Усилители и ресиверы",
+    "parent_id": 552,
+    "external_id": "Усилители и ресиверы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 559,
+    "name": "Видеокамеры",
+    "parent_id": 552,
+    "external_id": "Видеокамеры",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 560,
+    "name": "Видео, DVD и Blu-ray плееры",
+    "parent_id": 552,
+    "external_id": "Видео, DVD и Blu-ray плееры",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 561,
+    "name": "Кабели и адаптеры",
+    "parent_id": 552,
+    "external_id": "Кабели и адаптеры",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 562,
+    "name": "Музыка и фильмы",
+    "parent_id": 552,
+    "external_id": "Музыка и фильмы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 563,
+    "name": "Микрофоны",
+    "parent_id": 552,
+    "external_id": "Микрофоны",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 564,
+    "name": "MP3-плееры",
+    "parent_id": 552,
+    "external_id": "MP3-плееры",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 565,
+    "name": "Товары для компьютера",
+    "parent_id": 546,
+    "external_id": "Товары для компьютера",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 566,
+    "name": "Комплектующие",
+    "parent_id": 565,
+    "external_id": "Комплектующие",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 567,
+    "name": "Мониторы и запчасти",
+    "parent_id": 565,
+    "external_id": "Мониторы и запчасти",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 568,
+    "name": "Сетевое оборудование",
+    "parent_id": 565,
+    "external_id": "Сетевое оборудование",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 569,
+    "name": "Клавиатуры и мыши",
+    "parent_id": 565,
+    "external_id": "Клавиатуры и мыши",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 570,
+    "name": "Аксессуары",
+    "parent_id": 565,
+    "external_id": "Аксессуары",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 571,
+    "name": "Джойстики и рули",
+    "parent_id": 565,
+    "external_id": "Джойстики и рули",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 572,
+    "name": "Флэшки и карты памяти",
+    "parent_id": 565,
+    "external_id": "Флэшки и карты памяти",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 573,
+    "name": "Акустика",
+    "parent_id": 565,
+    "external_id": "Акустика",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 574,
+    "name": "Переносные жёсткие диски",
+    "parent_id": 565,
+    "external_id": "Переносные жёсткие диски",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 575,
+    "name": "Веб-камеры",
+    "parent_id": 565,
+    "external_id": "Веб-камеры",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 576,
+    "name": "ТВ-тюнеры",
+    "parent_id": 565,
+    "external_id": "ТВ-тюнеры",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 577,
+    "name": "Программы",
+    "parent_id": 565,
+    "external_id": "Программы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 578,
+    "name": "Компьютерные игры",
+    "parent_id": 565,
+    "external_id": "Компьютерные игры",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 579,
+    "name": "Игры, приставки и программы",
+    "parent_id": 546,
+    "external_id": "Игры, приставки и программы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 580,
+    "name": "Игры для приставок",
+    "parent_id": 579,
+    "external_id": "Игры для приставок",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 581,
+    "name": "Ноутбуки",
+    "parent_id": 546,
+    "external_id": "Ноутбуки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 582,
+    "name": "Настольные компьютеры",
+    "parent_id": 546,
+    "external_id": "Настольные компьютеры",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 583,
+    "name": "Системные блоки",
+    "parent_id": 582,
+    "external_id": "Системные блоки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 584,
+    "name": "Моноблоки",
+    "parent_id": 582,
+    "external_id": "Моноблоки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 585,
+    "name": "Другое",
+    "parent_id": 582,
+    "external_id": "Другое",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 586,
+    "name": "Фототехника",
+    "parent_id": 546,
+    "external_id": "Фототехника",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 587,
+    "name": "Оборудование и аксессуары",
+    "parent_id": 586,
+    "external_id": "Оборудование и аксессуары",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 588,
+    "name": "Объективы",
+    "parent_id": 586,
+    "external_id": "Объективы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 589,
+    "name": "Компактные фотоаппараты",
+    "parent_id": 586,
+    "external_id": "Компактные фотоаппараты",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 590,
+    "name": "Плёночные фотоаппараты",
+    "parent_id": 586,
+    "external_id": "Плёночные фотоаппараты",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 591,
+    "name": "Зеркальные фотоаппараты",
+    "parent_id": 586,
+    "external_id": "Зеркальные фотоаппараты",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 592,
+    "name": "Бинокли и телескопы",
+    "parent_id": 586,
+    "external_id": "Бинокли и телескопы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 593,
+    "name": "Планшеты и электронные книги",
+    "parent_id": 546,
+    "external_id": "Планшеты и электронные книги",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 594,
+    "name": "Планшеты",
+    "parent_id": 593,
+    "external_id": "Планшеты",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 595,
+    "name": "Аксессуары",
+    "parent_id": 593,
+    "external_id": "Аксессуары",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 596,
+    "name": "Электронные книги",
+    "parent_id": 593,
+    "external_id": "Электронные книги",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 597,
+    "name": "Оргтехника и расходники",
+    "parent_id": 546,
+    "external_id": "Оргтехника и расходники",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 598,
+    "name": "МФУ, копиры и сканеры",
+    "parent_id": 597,
+    "external_id": "МФУ, копиры и сканеры",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 599,
+    "name": "Принтеры",
+    "parent_id": 597,
+    "external_id": "Принтеры",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 600,
+    "name": "Канцелярия",
+    "parent_id": 597,
+    "external_id": "Канцелярия",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 601,
+    "name": "ИБП, сетевые фильтры",
+    "parent_id": 597,
+    "external_id": "ИБП, сетевые фильтры",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 602,
+    "name": "Телефония",
+    "parent_id": 597,
+    "external_id": "Телефония",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 603,
+    "name": "Уничтожители бумаг",
+    "parent_id": 597,
+    "external_id": "Уничтожители бумаг",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 604,
+    "name": "Расходные материалы",
+    "parent_id": 597,
+    "external_id": "Расходные материалы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 605,
+    "name": "Хобби и отдых",
+    "parent_id": null,
+    "external_id": "Хобби и отдых",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 606,
+    "name": "Билеты и путешествия",
+    "parent_id": 605,
+    "external_id": "Билеты и путешествия",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 607,
+    "name": "Карты, купоны",
+    "parent_id": 606,
+    "external_id": "Карты, купоны",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 608,
+    "name": "Концерты",
+    "parent_id": 606,
+    "external_id": "Концерты",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 609,
+    "name": "Путешествия",
+    "parent_id": 606,
+    "external_id": "Путешествия",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 610,
+    "name": "Спорт",
+    "parent_id": 606,
+    "external_id": "Спорт",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 611,
+    "name": "Театр, опера, балет",
+    "parent_id": 606,
+    "external_id": "Театр, опера, балет",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 612,
+    "name": "Цирк, кино",
+    "parent_id": 606,
+    "external_id": "Цирк, кино",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 613,
+    "name": "Шоу, мюзикл",
+    "parent_id": 606,
+    "external_id": "Шоу, мюзикл",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 614,
+    "name": "Велосипеды",
+    "parent_id": 605,
+    "external_id": "Велосипеды",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 615,
+    "name": "BMX",
+    "parent_id": 614,
+    "external_id": "BMX",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 616,
+    "name": "Городские",
+    "parent_id": 614,
+    "external_id": "Городские",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 617,
+    "name": "Шоссейные",
+    "parent_id": 614,
+    "external_id": "Шоссейные",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 618,
+    "name": "Детские",
+    "parent_id": 614,
+    "external_id": "Детские",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 619,
+    "name": "Горные",
+    "parent_id": 614,
+    "external_id": "Горные",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 620,
+    "name": "Электровелосипеды",
+    "parent_id": 614,
+    "external_id": "Электровелосипеды",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 621,
+    "name": "Запчасти и аксессуары",
+    "parent_id": 614,
+    "external_id": "Запчасти и аксессуары",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 622,
+    "name": "Книги и журналы",
+    "parent_id": 605,
+    "external_id": "Книги и журналы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 623,
+    "name": "Журналы, газеты, брошюры",
+    "parent_id": 622,
+    "external_id": "Журналы, газеты, брошюры",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 624,
+    "name": "Книги",
+    "parent_id": 622,
+    "external_id": "Книги",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 625,
+    "name": "Учебная литература",
+    "parent_id": 622,
+    "external_id": "Учебная литература",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 626,
+    "name": "Коллекционирование",
+    "parent_id": 605,
+    "external_id": "Коллекционирование",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 627,
+    "name": "Банкноты",
+    "parent_id": 626,
+    "external_id": "Банкноты",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 628,
+    "name": "Билеты",
+    "parent_id": 626,
+    "external_id": "Билеты",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 629,
+    "name": "Вещи знаменитостей, автографы",
+    "parent_id": 626,
+    "external_id": "Вещи знаменитостей, автографы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 630,
+    "name": "Военные вещи",
+    "parent_id": 626,
+    "external_id": "Военные вещи",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 631,
+    "name": "Грампластинки",
+    "parent_id": 626,
+    "external_id": "Грампластинки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 632,
+    "name": "Документы",
+    "parent_id": 626,
+    "external_id": "Документы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 633,
+    "name": "Жетоны, медали, значки",
+    "parent_id": 626,
+    "external_id": "Жетоны, медали, значки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 634,
+    "name": "Игры",
+    "parent_id": 626,
+    "external_id": "Игры",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 635,
+    "name": "Календари",
+    "parent_id": 626,
+    "external_id": "Календари",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 636,
+    "name": "Картины",
+    "parent_id": 626,
+    "external_id": "Картины",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 637,
+    "name": "Киндер-сюрприз",
+    "parent_id": 626,
+    "external_id": "Киндер-сюрприз",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 638,
+    "name": "Конверты и почтовые карточки",
+    "parent_id": 626,
+    "external_id": "Конверты и почтовые карточки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 639,
+    "name": "Марки",
+    "parent_id": 626,
+    "external_id": "Марки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 640,
+    "name": "Модели",
+    "parent_id": 626,
+    "external_id": "Модели",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 641,
+    "name": "Монеты",
+    "parent_id": 626,
+    "external_id": "Монеты",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 642,
+    "name": "Открытки",
+    "parent_id": 626,
+    "external_id": "Открытки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 643,
+    "name": "Пепельницы, зажигалки",
+    "parent_id": 626,
+    "external_id": "Пепельницы, зажигалки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 644,
+    "name": "Пластиковые карточки",
+    "parent_id": 626,
+    "external_id": "Пластиковые карточки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 645,
+    "name": "Спортивные карточки",
+    "parent_id": 626,
+    "external_id": "Спортивные карточки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 646,
+    "name": "Фотографии, письма",
+    "parent_id": 626,
+    "external_id": "Фотографии, письма",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 647,
+    "name": "Этикетки, бутылки, пробки",
+    "parent_id": 626,
+    "external_id": "Этикетки, бутылки, пробки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 648,
+    "name": "Другое",
+    "parent_id": 626,
+    "external_id": "Другое",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 649,
+    "name": "Музыкальные инструменты",
+    "parent_id": 605,
+    "external_id": "Музыкальные инструменты",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 650,
+    "name": "Аккордеоны, гармони, баяны",
+    "parent_id": 649,
+    "external_id": "Аккордеоны, гармони, баяны",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 651,
+    "name": "Гитары и другие струнные",
+    "parent_id": 649,
+    "external_id": "Гитары и другие струнные",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 652,
+    "name": "Духовые",
+    "parent_id": 649,
+    "external_id": "Духовые",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 653,
+    "name": "Клавишные и синтезаторы",
+    "parent_id": 649,
+    "external_id": "Клавишные и синтезаторы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 654,
+    "name": "Скрипки и другие смычковые",
+    "parent_id": 649,
+    "external_id": "Скрипки и другие смычковые",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 655,
+    "name": "Ударные",
+    "parent_id": 649,
+    "external_id": "Ударные",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 656,
+    "name": "Для студии и концертов",
+    "parent_id": 649,
+    "external_id": "Для студии и концертов",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 657,
+    "name": "Аксессуары",
+    "parent_id": 649,
+    "external_id": "Аксессуары",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 658,
+    "name": "Охота и рыбалка",
+    "parent_id": 605,
+    "external_id": "Охота и рыбалка",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 659,
+    "name": "Ножи, мультитулы, топоры",
+    "parent_id": 658,
+    "external_id": "Ножи, мультитулы, топоры",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 660,
+    "name": "Охота",
+    "parent_id": 658,
+    "external_id": "Охота",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 661,
+    "name": "Рыбалка",
+    "parent_id": 658,
+    "external_id": "Рыбалка",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 662,
+    "name": "Костюмы для охоты и рыбалки",
+    "parent_id": 658,
+    "external_id": "Костюмы для охоты и рыбалки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 663,
+    "name": "Спорт и отдых",
+    "parent_id": 605,
+    "external_id": "Спорт и отдых",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 664,
+    "name": "Фитнес и тренажёры",
+    "parent_id": 663,
+    "external_id": "Фитнес и тренажёры",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 665,
+    "name": "Зимний спорт",
+    "parent_id": 663,
+    "external_id": "Зимний спорт",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 666,
+    "name": "Туризм и отдых на природе",
+    "parent_id": 663,
+    "external_id": "Туризм и отдых на природе",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 667,
+    "name": "Единоборства",
+    "parent_id": 663,
+    "external_id": "Единоборства",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 668,
+    "name": "Настольные и карточные игры",
+    "parent_id": 663,
+    "external_id": "Настольные и карточные игры",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 669,
+    "name": "Дайвинг и водный спорт",
+    "parent_id": 663,
+    "external_id": "Дайвинг и водный спорт",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 670,
+    "name": "Игры с мячом",
+    "parent_id": 663,
+    "external_id": "Игры с мячом",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 671,
+    "name": "Ролики и скейтбординг",
+    "parent_id": 663,
+    "external_id": "Ролики и скейтбординг",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 672,
+    "name": "Теннис и бадминтон",
+    "parent_id": 663,
+    "external_id": "Теннис и бадминтон",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 673,
+    "name": "Спортивное питание",
+    "parent_id": 663,
+    "external_id": "Спортивное питание",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 674,
+    "name": "Стрелковый спорт",
+    "parent_id": 663,
+    "external_id": "Стрелковый спорт",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 675,
+    "name": "Бильярд и боулинг",
+    "parent_id": 663,
+    "external_id": "Бильярд и боулинг",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 676,
+    "name": "Товары для отдыха",
+    "parent_id": 663,
+    "external_id": "Товары для отдыха",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 677,
+    "name": "Гимнастика и танцы",
+    "parent_id": 663,
+    "external_id": "Гимнастика и танцы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 678,
+    "name": "Конный спорт",
+    "parent_id": 663,
+    "external_id": "Конный спорт",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 679,
+    "name": "Самокаты и гироскутеры",
+    "parent_id": 663,
+    "external_id": "Самокаты и гироскутеры",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 680,
+    "name": "Бег",
+    "parent_id": 663,
+    "external_id": "Бег",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 681,
+    "name": "Награды и кубки",
+    "parent_id": 663,
+    "external_id": "Награды и кубки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 682,
+    "name": "Животные",
+    "parent_id": null,
+    "external_id": "Животные",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 683,
+    "name": "Собаки",
+    "parent_id": 682,
+    "external_id": "Собаки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 684,
+    "name": "Кошки",
+    "parent_id": 682,
+    "external_id": "Кошки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 685,
+    "name": "Птицы",
+    "parent_id": 682,
+    "external_id": "Птицы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 686,
+    "name": "Аквариум",
+    "parent_id": 682,
+    "external_id": "Аквариум",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 687,
+    "name": "Другие животные",
+    "parent_id": 682,
+    "external_id": "Другие животные",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 688,
+    "name": "Амфибии",
+    "parent_id": 687,
+    "external_id": "Амфибии",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 689,
+    "name": "Грызуны",
+    "parent_id": 687,
+    "external_id": "Грызуны",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 690,
+    "name": "Кролики",
+    "parent_id": 687,
+    "external_id": "Кролики",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 691,
+    "name": "Лошади",
+    "parent_id": 687,
+    "external_id": "Лошади",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 692,
+    "name": "Рептилии",
+    "parent_id": 687,
+    "external_id": "Рептилии",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 693,
+    "name": "С/х животные",
+    "parent_id": 687,
+    "external_id": "С/х животные",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 694,
+    "name": "Хорьки",
+    "parent_id": 687,
+    "external_id": "Хорьки",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 695,
+    "name": "Другое",
+    "parent_id": 687,
+    "external_id": "Другое",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 696,
+    "name": "Товары для животных",
+    "parent_id": 682,
+    "external_id": "Товары для животных",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 697,
+    "name": "Бизнес и оборудование",
+    "parent_id": null,
+    "external_id": "Бизнес и оборудование",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 698,
+    "name": "Оборудование для бизнеса",
+    "parent_id": 697,
+    "external_id": "Оборудование для бизнеса",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 699,
+    "name": "Промышленное",
+    "parent_id": 698,
+    "external_id": "Промышленное",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 700,
+    "name": "Логистика и склад",
+    "parent_id": 698,
+    "external_id": "Логистика и склад",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 701,
+    "name": "Торговое",
+    "parent_id": 698,
+    "external_id": "Торговое",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 702,
+    "name": "Пищевое",
+    "parent_id": 698,
+    "external_id": "Пищевое",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 703,
+    "name": "Для салона красоты",
+    "parent_id": 698,
+    "external_id": "Для салона красоты",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 704,
+    "name": "Для автобизнеса",
+    "parent_id": 698,
+    "external_id": "Для автобизнеса",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 705,
+    "name": "Майнинг",
+    "parent_id": 698,
+    "external_id": "Майнинг",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 706,
+    "name": "Лабораторное",
+    "parent_id": 698,
+    "external_id": "Лабораторное",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 707,
+    "name": "Медицинское",
+    "parent_id": 698,
+    "external_id": "Медицинское",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 708,
+    "name": "Телекоммуникационное",
+    "parent_id": 698,
+    "external_id": "Телекоммуникационное",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 709,
+    "name": "Другое",
+    "parent_id": 698,
+    "external_id": "Другое",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 710,
+    "name": "Франшизы",
+    "parent_id": 697,
+    "external_id": "Франшизы",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 711,
+    "name": "Автобизнес",
+    "parent_id": 710,
+    "external_id": "Автобизнес",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 712,
+    "name": "Арендный бизнес",
+    "parent_id": 710,
+    "external_id": "Арендный бизнес",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 713,
+    "name": "Красота и здоровье",
+    "parent_id": 710,
+    "external_id": "Красота и здоровье",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 714,
+    "name": "Общественное питание",
+    "parent_id": 710,
+    "external_id": "Общественное питание",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 715,
+    "name": "Производство",
+    "parent_id": 710,
+    "external_id": "Производство",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 716,
+    "name": "Пункты выдачи заказов",
+    "parent_id": 710,
+    "external_id": "Пункты выдачи заказов",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 717,
+    "name": "Сельское хозяйство",
+    "parent_id": 710,
+    "external_id": "Сельское хозяйство",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 718,
+    "name": "Строительство",
+    "parent_id": 710,
+    "external_id": "Строительство",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 719,
+    "name": "Сфера развлечений",
+    "parent_id": 710,
+    "external_id": "Сфера развлечений",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 720,
+    "name": "Сфера услуг",
+    "parent_id": 710,
+    "external_id": "Сфера услуг",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 721,
+    "name": "Торговля",
+    "parent_id": 710,
+    "external_id": "Торговля",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 722,
+    "name": "Туризм",
+    "parent_id": 710,
+    "external_id": "Туризм",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 723,
+    "name": "IT бизнес",
+    "parent_id": 710,
+    "external_id": "IT бизнес",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 724,
+    "name": "Готовый бизнес",
+    "parent_id": 697,
+    "external_id": "Готовый бизнес",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 725,
+    "name": "Автобизнес",
+    "parent_id": 724,
+    "external_id": "Автобизнес",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 726,
+    "name": "Арендный бизнес",
+    "parent_id": 724,
+    "external_id": "Арендный бизнес",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 727,
+    "name": "Красота и здоровье",
+    "parent_id": 724,
+    "external_id": "Красота и здоровье",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 728,
+    "name": "Общественное питание",
+    "parent_id": 724,
+    "external_id": "Общественное питание",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 729,
+    "name": "Производство",
+    "parent_id": 724,
+    "external_id": "Производство",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 730,
+    "name": "Пункты выдачи заказов",
+    "parent_id": 724,
+    "external_id": "Пункты выдачи заказов",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 731,
+    "name": "Сельское хозяйство",
+    "parent_id": 724,
+    "external_id": "Сельское хозяйство",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 732,
+    "name": "Строительство",
+    "parent_id": 724,
+    "external_id": "Строительство",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 733,
+    "name": "Сфера развлечений",
+    "parent_id": 724,
+    "external_id": "Сфера развлечений",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 734,
+    "name": "Сфера услуг",
+    "parent_id": 724,
+    "external_id": "Сфера услуг",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 735,
+    "name": "Торговля",
+    "parent_id": 724,
+    "external_id": "Торговля",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 736,
+    "name": "Туризм",
+    "parent_id": 724,
+    "external_id": "Туризм",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 737,
+    "name": "IT бизнес",
+    "parent_id": 724,
+    "external_id": "IT бизнес",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 738,
+    "name": "Другое",
+    "parent_id": 724,
+    "external_id": "Другое",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 739,
+    "name": "ПО для бизнеса",
+    "parent_id": 697,
+    "external_id": "ПО для бизнеса",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 740,
+    "name": "Аналитика",
+    "parent_id": 739,
+    "external_id": "Аналитика",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 741,
+    "name": "Безопасность",
+    "parent_id": 739,
+    "external_id": "Безопасность",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 742,
+    "name": "Закупки, склад, логистика",
+    "parent_id": 739,
+    "external_id": "Закупки, склад, логистика",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 743,
+    "name": "Отраслевое ПО",
+    "parent_id": 739,
+    "external_id": "Отраслевое ПО",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 744,
+    "name": "Офисное ПО",
+    "parent_id": 739,
+    "external_id": "Офисное ПО",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 745,
+    "name": "Продажи и маркетинг",
+    "parent_id": 739,
+    "external_id": "Продажи и маркетинг",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 746,
+    "name": "Управление персоналом и обучение",
+    "parent_id": 739,
+    "external_id": "Управление персоналом и обучение",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 747,
+    "name": "Управление предприятием и производством",
+    "parent_id": 739,
+    "external_id": "Управление предприятием и производством",
+    "description": null,
+    "is_active": true
+  },
+  {
+    "id": 748,
+    "name": "Управление IT инфраструктурой",
+    "parent_id": 739,
+    "external_id": "Управление IT инфраструктурой",
+    "description": null,
+    "is_active": true
+  }
+]
